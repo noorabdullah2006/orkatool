@@ -1,0 +1,26 @@
+:root {
+  /* ==================================================
+     Border Radius Scale
+  ================================================== */
+
+  --radius-none: 0;
+  --radius-xs: 0.375rem;   /* 6px */
+  --radius-sm: 0.5rem;     /* 8px */
+  --radius-md: 0.75rem;    /* 12px */
+  --radius-lg: 1rem;       /* 16px */
+  --radius-xl: 1.25rem;    /* 20px */
+  --radius-2xl: 1.5rem;    /* 24px */
+  --radius-full: 9999px;
+
+  /* ==================================================
+     Semantic Radius Tokens
+  ================================================== */
+
+  --button-radius: var(--radius-md);
+  --input-radius: var(--radius-md);
+  --card-radius: var(--radius-lg);
+  --modal-radius: var(--radius-xl);
+  --image-radius: var(--radius-lg);
+  --badge-radius: var(--radius-full);
+  --tooltip-radius: var(--radius-md);
+}

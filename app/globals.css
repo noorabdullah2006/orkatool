@@ -1,26 +1,50 @@
-@import "tailwindcss";
+@import "../styles/index.css";
+/* ==========================================
+   DESIGN TOKENS
+========================================== */
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import "../styles/tokens/colors.css";
+@import "../styles/tokens/typography.css";
+@import "../styles/tokens/spacing.css";
+@import "../styles/tokens/radius.css";
+@import "../styles/tokens/shadows.css";
+@import "../styles/tokens/motion.css";
+@import "../styles/tokens/layout.css";
+@import "../styles/tokens/z-index.css";
+@import "../styles/tokens/themes.css";
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* ==========================================
+   BASE
+========================================== */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+@import "../styles/base/reset.css";
+@import "../styles/base/base.css";
+@import "../styles/base/typography.css";
+@import "../styles/base/utilities.css";
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+/* ==========================================
+   LAYOUT PATTERNS
+========================================== */
+
+@import "../styles/patterns/wrapper.css";
+@import "../styles/patterns/grid.css";
+@import "../styles/patterns/stack.css";
+@import "../styles/patterns/cluster.css";
+
+/* ==========================================
+   COMPONENTS
+========================================== */
+
+@import "../styles/components/buttons.css";
+@import "../styles/components/forms.css";
+@import "../styles/components/cards.css";
+@import "../styles/components/tables.css";
+@import "../styles/components/badges.css";
+@import "../styles/components/alerts.css";
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+@import "../styles/animations/keyframes.css";
+@import "../styles/animations/transitions.css";

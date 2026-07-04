@@ -1,0 +1,102 @@
+/* ==================================================
+   BASE
+   Global Foundation
+   ================================================== */
+
+/* Root */
+
+html {
+  min-height: 100%;
+}
+
+/* Body */
+
+body {
+  min-height: 100vh;
+
+  background: var(--color-background);
+  color: var(--color-text);
+
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+
+  overflow-x: hidden;
+
+  isolation: isolate;
+}
+
+/* Text Selection */
+
+::selection {
+  background: var(--color-primary-light);
+  color: var(--color-heading);
+}
+
+/* Focus Ring */
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Semantic Elements */
+
+main,
+section,
+article,
+aside,
+header,
+footer,
+nav {
+  display: block;
+}
+
+/* Embedded Media */
+
+iframe {
+  display: block;
+  max-width: 100%;
+  border: 0;
+}
+
+/* Horizontal Rule */
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--color-border);
+}
+
+/* Disabled Elements */
+
+:disabled {
+  cursor: not-allowed;
+}
+
+/* Hidden Attribute */
+
+[hidden] {
+  display: none !important;
+}
+
+/* Reduced Motion */
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+
+    scroll-behavior: auto !important;
+  }
+}

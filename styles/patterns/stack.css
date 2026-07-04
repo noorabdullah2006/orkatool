@@ -1,0 +1,21 @@
+/* ==================================================
+   STACK
+   ================================================== */
+
+.l-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.l-stack-sm {
+  gap: var(--space-4);
+}
+
+.l-stack-lg {
+  gap: var(--space-8);
+}
+
+.l-stack-xl {
+  gap: var(--space-12);
+}

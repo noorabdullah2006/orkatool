@@ -1,0 +1,24 @@
+/* ==================================================
+   WRAPPER
+   ================================================== */
+
+.l-wrapper {
+  width: min(100%, var(--container-lg));
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+.l-content {
+  width: min(100%, var(--content-width));
+  margin-inline: auto;
+}
+
+.l-blog {
+  width: min(100%, var(--blog-width));
+  margin-inline: auto;
+}
+
+.l-tool {
+  width: min(100%, 1100px);
+  margin-inline: auto;
+}

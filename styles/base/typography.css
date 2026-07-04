@@ -1,0 +1,139 @@
+/* ==================================================
+   TYPOGRAPHY
+   ================================================== */
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-heading);
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+}
+
+h5 {
+  font-size: var(--font-size-h5);
+}
+
+h6 {
+  font-size: var(--font-size-h6);
+}
+
+/* Paragraph */
+
+p {
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Lists */
+
+ul,
+ol {
+  padding-inline-start: var(--space-6);
+}
+
+li {
+  line-height: var(--line-height-relaxed);
+}
+
+/* Links */
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition:
+    color var(--duration-fast) var(--ease-standard),
+    text-decoration-color var(--duration-fast) var(--ease-standard);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus-visible {
+  text-decoration: underline;
+}
+
+/* Strong */
+
+strong,
+b {
+  font-weight: var(--font-weight-bold);
+}
+
+/* Emphasis */
+
+em,
+i {
+  font-style: italic;
+}
+
+/* Small */
+
+small {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+/* Mark */
+
+mark {
+  background: var(--color-primary-light);
+  color: inherit;
+  padding-inline: 0.15em;
+}
+
+/* Inline Code */
+
+code,
+kbd,
+samp {
+  font-family: var(--font-family-mono);
+  font-size: 0.95em;
+}
+
+/* Code Block */
+
+pre {
+  overflow-x: auto;
+  font-family: var(--font-family-mono);
+}
+
+/* Blockquote */
+
+blockquote {
+  border-inline-start: 4px solid var(--color-border);
+  padding-inline-start: var(--space-4);
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* Horizontal Rule */
+
+hr {
+  margin-block: var(--space-12);
+}

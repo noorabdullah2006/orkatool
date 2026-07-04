@@ -1,0 +1,41 @@
+:root {
+  /* ==================================================
+     Motion Duration
+  ================================================== */
+
+  --duration-fast: 120ms;
+  --duration-normal: 220ms;
+  --duration-slow: 350ms;
+
+  /* ==================================================
+     Motion Timing Functions
+  ================================================== */
+
+  --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-in: ease-in;
+  --ease-out: ease-out;
+  --ease-in-out: ease-in-out;
+
+  /* ==================================================
+     Common Transition Tokens
+  ================================================== */
+
+  --transition-fast:
+    all var(--duration-fast) var(--ease-standard);
+
+  --transition-normal:
+    all var(--duration-normal) var(--ease-standard);
+
+  --transition-slow:
+    all var(--duration-slow) var(--ease-standard);
+
+  /* ==================================================
+     Component Transition Tokens
+  ================================================== */
+
+  --button-transition: var(--transition-fast);
+  --card-transition: var(--transition-normal);
+  --input-transition: var(--transition-fast);
+  --link-transition: var(--transition-fast);
+  --modal-transition: var(--transition-slow);
+}

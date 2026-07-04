@@ -1,0 +1,54 @@
+:root {
+  /* ==================================================
+     Container Widths
+  ================================================== */
+
+  --container-xs: 100%;
+  --container-sm: 768px;
+  --container-md: 992px;
+  --container-lg: 1200px;
+  --container-xl: 1440px;
+
+  /* ==================================================
+     Content Widths
+  ================================================== */
+
+  --content-width: 780px;
+  --blog-width: 820px;
+  --tool-width: 1100px;
+  --table-width: 1280px;
+
+  /* ==================================================
+     Container Padding
+  ================================================== */
+
+  --container-padding-mobile: 16px;
+  --container-padding-tablet: 24px;
+  --container-padding-desktop: 32px;
+
+  /* ==================================================
+     Grid System
+  ================================================== */
+
+  --grid-columns-desktop: 12;
+  --grid-columns-tablet: 8;
+  --grid-columns-mobile: 4;
+
+  /* ==================================================
+     Grid Gaps
+  ================================================== */
+
+  --gap-xs: 8px;
+  --gap-sm: 16px;
+  --gap-md: 24px;
+  --gap-lg: 32px;
+  --gap-xl: 48px;
+
+  /* ==================================================
+     Section Spacing
+  ================================================== */
+
+  --section-spacing-mobile: 48px;
+  --section-spacing-tablet: 64px;
+  --section-spacing-desktop: 80px;
+}
