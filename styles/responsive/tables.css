@@ -1,0 +1,12 @@
+/* ==========================================
+   RESPONSIVE TABLES
+========================================== */
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table-wrapper table {
+  min-width: 640px;
+}

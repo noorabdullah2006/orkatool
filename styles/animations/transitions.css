@@ -1,0 +1,128 @@
+/* ==========================================
+   TRANSITIONS
+   OrkaTool Design System v1.0
+========================================== */
+
+/* ------------------------------------------
+   Global Transition Variables
+------------------------------------------ */
+
+:root {
+  --transition-fast:
+    all var(--duration-fast) var(--ease-standard);
+
+  --transition-normal:
+    all var(--duration-normal) var(--ease-standard);
+
+  --transition-slow:
+    all var(--duration-slow) var(--ease-standard);
+
+  --transition-colors:
+    color var(--duration-fast) var(--ease-standard),
+    background-color var(--duration-fast) var(--ease-standard),
+    border-color var(--duration-fast) var(--ease-standard);
+
+  --transition-shadow:
+    box-shadow var(--duration-normal) var(--ease-standard);
+
+  --transition-transform:
+    transform var(--duration-normal) var(--ease-standard);
+
+  --transition-opacity:
+    opacity var(--duration-fast) var(--ease-standard);
+}
+
+/* ------------------------------------------
+   Utility Classes
+------------------------------------------ */
+
+.transition-fast {
+  transition: var(--transition-fast);
+}
+
+.transition-normal {
+  transition: var(--transition-normal);
+}
+
+.transition-slow {
+  transition: var(--transition-slow);
+}
+
+.transition-colors {
+  transition: var(--transition-colors);
+}
+
+.transition-shadow {
+  transition: var(--transition-shadow);
+}
+
+.transition-transform {
+  transition: var(--transition-transform);
+}
+
+.transition-opacity {
+  transition: var(--transition-opacity);
+}
+
+/* ------------------------------------------
+   Interactive Elements
+------------------------------------------ */
+
+button,
+a,
+input,
+select,
+textarea,
+summary {
+  transition:
+    var(--transition-colors),
+    var(--transition-shadow),
+    var(--transition-transform);
+}
+
+/* ------------------------------------------
+   Hover Lift
+------------------------------------------ */
+
+.hover-lift-sm:hover {
+  transform: translateY(-2px);
+}
+
+.hover-lift-md:hover {
+  transform: translateY(-4px);
+}
+
+/* ------------------------------------------
+   Hover Scale
+------------------------------------------ */
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+/* ------------------------------------------
+   Focus
+------------------------------------------ */
+
+.focus-transition:focus-visible {
+  transition:
+    outline-color var(--duration-fast) var(--ease-standard),
+    box-shadow var(--duration-fast) var(--ease-standard);
+}
+
+/* ------------------------------------------
+   Reduced Motion
+------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+
+    scroll-behavior: auto !important;
+  }
+}

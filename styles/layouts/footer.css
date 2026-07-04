@@ -1,0 +1,21 @@
+/* ==========================================
+   FOOTER
+========================================== */
+
+.site-footer {
+  margin-top: auto;
+
+  padding-block: var(--space-12);
+
+  border-top: 1px solid var(--border);
+
+  background: var(--color-surface);
+}
+
+.site-footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}

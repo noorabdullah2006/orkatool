@@ -1,0 +1,36 @@
+/* ==========================================
+   SECTION
+========================================== */
+
+.section {
+  padding-block: var(--section-padding-mobile);
+}
+
+.section-sm {
+  padding-block: var(--space-8);
+}
+
+.section-lg {
+  padding-block: var(--section-padding-desktop);
+}
+
+.section-title {
+  margin-bottom: var(--space-4);
+}
+
+.section-description {
+  margin-bottom: var(--space-8);
+  color: var(--color-text-muted);
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-block: var(--section-padding-tablet);
+  }
+}
+
+@media (min-width: 1200px) {
+  .section {
+    padding-block: var(--section-padding-desktop);
+  }
+}

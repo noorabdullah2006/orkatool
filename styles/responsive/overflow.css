@@ -1,0 +1,32 @@
+/* ==========================================
+   OVERFLOW PREVENTION
+========================================== */
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+img,
+svg,
+video,
+canvas,
+iframe {
+  max-width: 100%;
+}
+
+pre {
+  overflow-x: auto;
+}
+
+code {
+  overflow-wrap: anywhere;
+}
+
+table {
+  max-width: 100%;
+}
+
+* {
+  min-width: 0;
+}

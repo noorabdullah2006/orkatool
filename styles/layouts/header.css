@@ -1,0 +1,23 @@
+/* ==========================================
+   HEADER
+========================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+
+  background: var(--color-surface);
+
+  border-bottom: 1px solid var(--border);
+
+  box-shadow: var(--shadow-xs);
+}
+
+.site-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 72px;
+}

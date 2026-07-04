@@ -1,14 +1,17 @@
 import { ReactNode } from "react";
 
-type ContainerSize = "default" | "narrow" | "wide" | "full";
-
 interface ContainerProps {
   children: ReactNode;
-  size?: ContainerSize;
+  className?: string;
 }
 
 export default function Container({
   children,
+  className = "",
 }: ContainerProps) {
-  return <div>{children}</div>;
+  return (
+    <div className={`container ${className}`.trim()}>
+      {children}
+    </div>
+  );
 }

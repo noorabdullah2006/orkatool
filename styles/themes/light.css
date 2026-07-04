@@ -1,0 +1,20 @@
+/* ==========================================
+   ORKATOOL LIGHT THEME
+   ========================================== */
+
+/*
+  Future Ready Theme System
+
+  Currently OrkaTool uses only the Light Theme.
+
+  All colors are defined through design tokens.
+
+  Components MUST use semantic variables instead of
+  hardcoded colors.
+
+  Future Dark Mode will only override these variables.
+*/
+
+:root {
+  color-scheme: light;
+}
