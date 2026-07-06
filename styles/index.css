@@ -1,6 +1,4 @@
-/* ==========================
-   Design Tokens
-========================== */
+/* Tokens */
 
 @import "./tokens/colors.css";
 @import "./tokens/typography.css";
@@ -11,3 +9,42 @@
 @import "./tokens/layout.css";
 @import "./tokens/z-index.css";
 @import "./tokens/themes.css";
+
+/* Base */
+
+@import "./base/reset.css";
+@import "./base/base.css";
+@import "./base/typography.css";
+
+/* Layout */
+
+@import "./layouts/container.css";
+@import "./layouts/header.css";
+@import "./layouts/footer.css";
+@import "./layouts/main.css";
+@import "./layouts/section.css";
+
+/* Components */
+
+@import "./components/buttons.css";
+
+/* Responsive */
+
+@import "./responsive/breakpoints.css";
+@import "./responsive/responsive.css";
+@import "./responsive/images.css";
+@import "./responsive/overflow.css";
+@import "./responsive/tables.css";
+
+/* Animations */
+
+@import "./animations/keyframes.css";
+@import "./animations/transitions.css";
+
+/* Sections */
+
+@import "./sections/hero.css";
+
+/* Theme */
+
+@import "./themes/light.css";

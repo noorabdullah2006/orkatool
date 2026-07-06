@@ -1,8 +1,9 @@
-export default function Home() {
+import Hero from "@/components/sections/hero";
+
+export default function HomePage() {
   return (
     <>
-      <h1>Welcome to OrkaTool</h1>
-      <p>Professional Online Tools Platform</p>
+      <Hero />
     </>
   );
 }
