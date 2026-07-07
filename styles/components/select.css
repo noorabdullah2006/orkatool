@@ -1,0 +1,149 @@
+/* ==========================================================
+   SELECT WRAPPER
+========================================================== */
+
+.select-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--space-2);
+
+  width: 100%;
+}
+
+/* ==========================================================
+   LABEL
+========================================================== */
+
+.select-label {
+  color: var(--color-text-primary);
+
+  font-size: var(--font-size-sm);
+
+  font-weight: var(--font-weight-medium);
+}
+
+/* ==========================================================
+   FIELD
+========================================================== */
+
+.select-field {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+}
+
+/* ==========================================================
+   SELECT
+========================================================== */
+
+.select {
+  width: 100%;
+
+  min-height: 48px;
+
+  padding: 0 var(--space-4);
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-lg);
+
+  background: var(--color-surface);
+
+  color: var(--color-text-primary);
+
+  font-size: var(--font-size-base);
+
+  font-family: inherit;
+
+  cursor: pointer;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.select:hover {
+  border-color: var(--color-border-dark);
+}
+
+.select:focus {
+  outline: none;
+
+  border-color: var(--color-primary);
+
+  box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+
+/* ==========================================================
+   CUSTOM ARROW
+========================================================== */
+
+.select-field::after {
+  content: "";
+
+  position: absolute;
+
+  right: var(--space-4);
+
+  width: 10px;
+  height: 10px;
+
+  border-right: 2px solid var(--color-text-muted);
+  border-bottom: 2px solid var(--color-text-muted);
+
+  transform: rotate(45deg) translateY(-2px);
+
+  pointer-events: none;
+}
+
+/* ==========================================================
+   FULL WIDTH
+========================================================== */
+
+.select--full {
+  width: 100%;
+}
+
+/* ==========================================================
+   ERROR
+========================================================== */
+
+.select--error {
+  border-color: var(--color-danger);
+}
+
+.select--error:focus {
+  border-color: var(--color-danger);
+
+  box-shadow: 0 0 0 3px var(--color-danger-bg);
+}
+
+/* ==========================================================
+   HELPER
+========================================================== */
+
+.select-helper {
+  color: var(--color-text-secondary);
+
+  font-size: var(--font-size-sm);
+}
+
+/* ==========================================================
+   ERROR TEXT
+========================================================== */
+
+.select-error {
+  color: var(--color-danger);
+
+  font-size: var(--font-size-sm);
+
+  font-weight: var(--font-weight-medium);
+}

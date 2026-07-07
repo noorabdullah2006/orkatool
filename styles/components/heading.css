@@ -1,0 +1,101 @@
+/* ==========================================================
+   HEADING
+========================================================== */
+
+.heading {
+  margin: 0;
+
+  font-family: var(--font-family-base);
+
+  font-weight: var(--font-weight-bold);
+
+  line-height: var(--line-height-heading);
+
+  letter-spacing: var(--letter-spacing-tight);
+
+  color: var(--color-heading);
+}
+
+/* ==========================================================
+   LEVELS
+========================================================== */
+
+.heading--h1 {
+  font-size: var(--font-size-h1);
+}
+
+.heading--h2 {
+  font-size: var(--font-size-h2);
+}
+
+.heading--h3 {
+  font-size: var(--font-size-h3);
+}
+
+.heading--h4 {
+  font-size: var(--font-size-h4);
+}
+
+.heading--h5 {
+  font-size: var(--font-size-h5);
+}
+
+.heading--h6 {
+  font-size: var(--font-size-h6);
+}
+
+/* ==========================================================
+   ALIGNMENT
+========================================================== */
+
+.heading--left {
+  text-align: left;
+}
+
+.heading--center {
+  text-align: center;
+}
+
+.heading--right {
+  text-align: right;
+}
+
+/* ==========================================================
+   COLORS
+========================================================== */
+
+.heading--default {
+  color: var(--color-heading);
+}
+
+.heading--primary {
+  color: var(--color-primary);
+}
+
+.heading--muted {
+  color: var(--color-muted);
+}
+
+/* ==========================================================
+   SPACING HELPERS
+========================================================== */
+
+.heading + .heading {
+  margin-top: var(--space-4);
+}
+
+.heading + p {
+  margin-top: var(--space-3);
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 768px) {
+
+  .heading {
+    line-height: var(--line-height-tight);
+  }
+
+}

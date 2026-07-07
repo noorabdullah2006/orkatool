@@ -1,0 +1,100 @@
+/* ==========================================================
+   ALERT
+========================================================== */
+
+.alert {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: var(--space-2);
+
+  padding: var(--space-4);
+
+  border: 1px solid transparent;
+
+  border-left-width: 4px;
+
+  border-radius: var(--radius-lg);
+
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+/* ==========================================================
+   TITLE
+========================================================== */
+
+.alert-title {
+  margin: 0;
+
+  color: inherit;
+
+  font-size: var(--font-size-base);
+
+  font-weight: var(--font-weight-semibold);
+
+  line-height: 1.4;
+}
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.alert-content {
+  color: inherit;
+
+  font-size: var(--font-size-sm);
+
+  line-height: 1.7;
+}
+
+/* ==========================================================
+   SUCCESS
+========================================================== */
+
+.alert--success {
+  background: var(--color-success-bg);
+
+  color: var(--color-success);
+
+  border-color: var(--color-success);
+}
+
+/* ==========================================================
+   WARNING
+========================================================== */
+
+.alert--warning {
+  background: var(--color-warning-bg);
+
+  color: var(--color-warning);
+
+  border-color: var(--color-warning);
+}
+
+/* ==========================================================
+   DANGER
+========================================================== */
+
+.alert--danger {
+  background: var(--color-danger-bg);
+
+  color: var(--color-danger);
+
+  border-color: var(--color-danger);
+}
+
+/* ==========================================================
+   INFO
+========================================================== */
+
+.alert--info {
+  background: var(--color-info-bg);
+
+  color: var(--color-info);
+
+  border-color: var(--color-info);
+}

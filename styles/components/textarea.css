@@ -1,0 +1,125 @@
+/* ==========================================================
+   TEXTAREA WRAPPER
+========================================================== */
+
+.textarea-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--space-2);
+
+  width: 100%;
+}
+
+/* ==========================================================
+   LABEL
+========================================================== */
+
+.textarea-label {
+  color: var(--color-text-primary);
+
+  font-size: var(--font-size-sm);
+
+  font-weight: var(--font-weight-medium);
+}
+
+/* ==========================================================
+   TEXTAREA
+========================================================== */
+
+.textarea {
+  width: 100%;
+
+  min-height: 140px;
+
+  padding: var(--space-4);
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-lg);
+
+  background: var(--color-surface);
+
+  color: var(--color-text-primary);
+
+  font-size: var(--font-size-base);
+
+  font-family: inherit;
+
+  line-height: 1.6;
+
+  resize: vertical;
+
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+.textarea:hover {
+  border-color: var(--color-border-dark);
+}
+
+.textarea:focus {
+  outline: none;
+
+  border-color: var(--color-primary);
+
+  box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+
+/* ==========================================================
+   FULL WIDTH
+========================================================== */
+
+.textarea--full {
+  width: 100%;
+}
+
+/* ==========================================================
+   NO RESIZE
+========================================================== */
+
+.textarea--no-resize {
+  resize: none;
+}
+
+/* ==========================================================
+   ERROR
+========================================================== */
+
+.textarea--error {
+  border-color: var(--color-danger);
+}
+
+.textarea--error:focus {
+  border-color: var(--color-danger);
+
+  box-shadow: 0 0 0 3px var(--color-danger-bg);
+}
+
+/* ==========================================================
+   HELPER
+========================================================== */
+
+.textarea-helper {
+  color: var(--color-text-secondary);
+
+  font-size: var(--font-size-sm);
+}
+
+/* ==========================================================
+   ERROR TEXT
+========================================================== */
+
+.textarea-error {
+  color: var(--color-danger);
+
+  font-size: var(--font-size-sm);
+
+  font-weight: var(--font-weight-medium);
+}

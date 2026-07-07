@@ -1,0 +1,176 @@
+/* ==========================================================
+   SWITCH WRAPPER
+========================================================== */
+
+.switch-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--space-2);
+
+  width: 100%;
+}
+
+/* ==========================================================
+   LABEL
+========================================================== */
+
+.switch-label {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: var(--space-3);
+
+  cursor: pointer;
+
+  user-select: none;
+}
+
+/* ==========================================================
+   INPUT
+========================================================== */
+
+.switch {
+  position: absolute;
+
+  opacity: 0;
+
+  pointer-events: none;
+}
+
+/* ==========================================================
+   TRACK
+========================================================== */
+
+.switch-track {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  width: 48px;
+
+  height: 28px;
+
+  flex-shrink: 0;
+
+  border-radius: 999px;
+
+  background: var(--color-border-dark);
+
+  transition:
+    background var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+/* ==========================================================
+   THUMB
+========================================================== */
+
+.switch-thumb {
+  position: absolute;
+
+  left: 3px;
+
+  width: 22px;
+
+  height: 22px;
+
+  border-radius: 50%;
+
+  background: var(--color-white);
+
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    transform var(--transition-fast),
+    background var(--transition-fast);
+}
+
+/* ==========================================================
+   CHECKED
+========================================================== */
+
+.switch:checked + .switch-track {
+  background: var(--color-primary);
+}
+
+.switch:checked + .switch-track .switch-thumb {
+  transform: translateX(20px);
+}
+
+/* ==========================================================
+   HOVER
+========================================================== */
+
+.switch-label:hover .switch-track {
+  box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+
+/* ==========================================================
+   FOCUS
+========================================================== */
+
+.switch:focus-visible + .switch-track {
+  box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+
+/* ==========================================================
+   TEXT
+========================================================== */
+
+.switch-text {
+  color: var(--color-text-primary);
+
+  font-size: var(--font-size-base);
+
+  line-height: 1.5;
+}
+
+/* ==========================================================
+   HELPER
+========================================================== */
+
+.switch-helper {
+  margin-left: 60px;
+
+  color: var(--color-text-secondary);
+
+  font-size: var(--font-size-sm);
+}
+
+/* ==========================================================
+   ERROR
+========================================================== */
+
+.switch--error + .switch-track {
+  background: var(--color-danger);
+}
+
+.switch-error {
+  margin-left: 60px;
+
+  color: var(--color-danger);
+
+  font-size: var(--font-size-sm);
+
+  font-weight: var(--font-weight-medium);
+}
+
+/* ==========================================================
+   DISABLED
+========================================================== */
+
+.switch:disabled + .switch-track {
+  opacity: .5;
+
+  cursor: not-allowed;
+}
+
+.switch:disabled ~ .switch-text {
+  opacity: .5;
+
+  cursor: not-allowed;
+}

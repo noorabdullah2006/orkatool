@@ -1,0 +1,169 @@
+/* ==========================================================
+   CHECKBOX WRAPPER
+========================================================== */
+
+.checkbox-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--space-2);
+
+  width: 100%;
+}
+
+/* ==========================================================
+   LABEL
+========================================================== */
+
+.checkbox-label {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: var(--space-3);
+
+  cursor: pointer;
+
+  user-select: none;
+}
+
+/* ==========================================================
+   INPUT
+========================================================== */
+
+.checkbox {
+  position: absolute;
+
+  opacity: 0;
+
+  pointer-events: none;
+}
+
+/* ==========================================================
+   BOX
+========================================================== */
+
+.checkbox-box {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 20px;
+
+  height: 20px;
+
+  flex-shrink: 0;
+
+  border: 2px solid var(--color-border-dark);
+
+  border-radius: var(--radius-sm);
+
+  background: var(--color-surface);
+
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+/* ==========================================================
+   CHECK ICON
+========================================================== */
+
+.checkbox:checked + .checkbox-box {
+  background: var(--color-primary);
+
+  border-color: var(--color-primary);
+}
+
+.checkbox:checked + .checkbox-box::after {
+  content: "";
+
+  width: 5px;
+
+  height: 10px;
+
+  border-right: 2px solid var(--color-white);
+
+  border-bottom: 2px solid var(--color-white);
+
+  transform: rotate(45deg);
+
+  margin-top: -2px;
+}
+
+/* ==========================================================
+   HOVER
+========================================================== */
+
+.checkbox-label:hover .checkbox-box {
+  border-color: var(--color-primary);
+}
+
+/* ==========================================================
+   FOCUS
+========================================================== */
+
+.checkbox:focus-visible + .checkbox-box {
+  box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+
+/* ==========================================================
+   TEXT
+========================================================== */
+
+.checkbox-text {
+  color: var(--color-text-primary);
+
+  font-size: var(--font-size-base);
+
+  line-height: 1.5;
+}
+
+/* ==========================================================
+   HELPER
+========================================================== */
+
+.checkbox-helper {
+  margin-left: 32px;
+
+  color: var(--color-text-secondary);
+
+  font-size: var(--font-size-sm);
+}
+
+/* ==========================================================
+   ERROR
+========================================================== */
+
+.checkbox--error + .checkbox-box {
+  border-color: var(--color-danger);
+}
+
+.checkbox-error {
+  margin-left: 32px;
+
+  color: var(--color-danger);
+
+  font-size: var(--font-size-sm);
+
+  font-weight: var(--font-weight-medium);
+}
+
+/* ==========================================================
+   DISABLED
+========================================================== */
+
+.checkbox:disabled + .checkbox-box {
+  opacity: .5;
+
+  cursor: not-allowed;
+}
+
+.checkbox:disabled ~ .checkbox-text {
+  opacity: .5;
+
+  cursor: not-allowed;
+}

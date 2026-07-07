@@ -1,0 +1,157 @@
+/* ==========================================================
+   TEXT
+========================================================== */
+
+.text {
+  margin: 0;
+
+  font-family: var(--font-family-base);
+
+  font-size: var(--font-size-base);
+
+  font-weight: var(--font-weight-regular);
+
+  line-height: var(--line-height-normal);
+
+  letter-spacing: var(--letter-spacing-normal);
+
+  color: var(--color-text);
+}
+
+/* ==========================================================
+   VARIANTS
+========================================================== */
+
+.text--body {
+  font-size: var(--font-size-base);
+
+  line-height: var(--line-height-normal);
+}
+
+.text--lead {
+  font-size: var(--font-size-lg);
+
+  font-weight: var(--font-weight-medium);
+
+  line-height: var(--line-height-relaxed);
+}
+
+.text--small {
+  font-size: var(--font-size-sm);
+
+  line-height: var(--line-height-normal);
+}
+
+.text--caption {
+  font-size: var(--font-size-xs);
+
+  line-height: var(--line-height-normal);
+
+  letter-spacing: var(--letter-spacing-wide);
+
+  text-transform: uppercase;
+}
+
+/* ==========================================================
+   COLORS
+========================================================== */
+
+.text--default {
+  color: var(--color-text);
+}
+
+.text--muted {
+  color: var(--color-muted);
+}
+
+.text--primary {
+  color: var(--color-primary);
+}
+
+.text--success {
+  color: var(--color-success);
+}
+
+.text--warning {
+  color: var(--color-warning);
+}
+
+.text--danger {
+  color: var(--color-danger);
+}
+
+/* ==========================================================
+   ALIGNMENT
+========================================================== */
+
+.text--left {
+  text-align: left;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.text--right {
+  text-align: right;
+}
+
+/* ==========================================================
+   SPACING
+========================================================== */
+
+.text + .text {
+  margin-top: var(--space-3);
+}
+
+.heading + .text {
+  margin-top: var(--space-3);
+}
+
+/* ==========================================================
+   LINKS
+========================================================== */
+
+.text a {
+  color: var(--color-link);
+
+  text-decoration: none;
+
+  transition: color var(--transition-fast);
+}
+
+.text a:hover {
+  color: var(--color-link-hover);
+
+  text-decoration: underline;
+}
+
+/* ==========================================================
+   STRONG
+========================================================== */
+
+.text strong {
+  font-weight: var(--font-weight-semibold);
+
+  color: var(--color-heading);
+}
+
+/* ==========================================================
+   EMPHASIS
+========================================================== */
+
+.text em {
+  font-style: italic;
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 768px) {
+
+  .text--lead {
+    font-size: var(--font-size-base);
+  }
+
+}
