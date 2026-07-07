@@ -1,46 +1,35 @@
-const footerLinks = [
-  {
-    title: "Product",
-    links: [
-      { label: "Tools", href: "/tools" },
-      { label: "Categories", href: "/categories" },
-      { label: "Blog", href: "/blog" },
-    ],
-  },
-  {
-    title: "Company",
-    links: [
-      { label: "About", href: "/about" },
-      { label: "Contact", href: "/contact" },
-    ],
-  },
-  {
-    title: "Legal",
-    links: [
-      { label: "Privacy Policy", href: "/privacy-policy" },
-      { label: "Terms of Service", href: "/terms-of-service" },
-    ],
-  },
-];
+import { footerSections } from "./footer-data";
 
 export default function FooterLinks() {
   return (
     <div className="footer-links">
-      {footerLinks.map((group) => (
-        <div key={group.title} className="footer-column">
-          <h3>{group.title}</h3>
 
-          <ul>
-            {group.links.map((link) => (
+      {footerSections.map((section) => (
+        <div
+          key={section.title}
+          className="footer-links-group"
+        >
+          <h3 className="footer-links-title">
+            {section.title}
+          </h3>
+
+          <ul className="footer-links-list">
+
+            {section.links.map((link) => (
               <li key={link.href}>
-                <a href={link.href}>
+                <a
+                  href={link.href}
+                  className="footer-link"
+                >
                   {link.label}
                 </a>
               </li>
             ))}
+
           </ul>
         </div>
       ))}
+
     </div>
   );
 }
