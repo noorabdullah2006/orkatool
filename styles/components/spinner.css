@@ -1,0 +1,72 @@
+/* ==========================================================
+   SPINNER
+========================================================== */
+
+.spinner {
+  display: inline-block;
+
+  border-style: solid;
+
+  border-radius: 999px;
+
+  animation: spinner-rotate .7s linear infinite;
+}
+
+/* ==========================================================
+   SIZES
+========================================================== */
+
+.spinner--sm {
+  width: 16px;
+  height: 16px;
+
+  border-width: 2px;
+}
+
+.spinner--md {
+  width: 20px;
+  height: 20px;
+
+  border-width: 2px;
+}
+
+.spinner--lg {
+  width: 28px;
+  height: 28px;
+
+  border-width: 3px;
+}
+
+/* ==========================================================
+   COLORS
+========================================================== */
+
+.spinner--primary {
+  border-color: var(--color-primary-light);
+
+  border-top-color: var(--color-primary);
+}
+
+.spinner--white {
+  border-color: rgba(255,255,255,.35);
+
+  border-top-color: var(--color-white);
+}
+
+.spinner--current {
+  border-color: rgba(0,0,0,.15);
+
+  border-top-color: currentColor;
+}
+
+/* ==========================================================
+   ANIMATION
+========================================================== */
+
+@keyframes spinner-rotate {
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}

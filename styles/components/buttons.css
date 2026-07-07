@@ -1,180 +1,237 @@
-/* ==========================================
-   BUTTON
-========================================== */
+/* ==========================================================
+   BUTTON BASE
+========================================================== */
 
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   gap: var(--space-2);
 
   min-height: 44px;
-  padding: 0 var(--space-5);
+
+  padding: var(--space-3) var(--space-5);
 
   border: 1px solid transparent;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
 
-  font-family: var(--font-family-base);
-  font-size: var(--font-size-base);
+  background: transparent;
+
+  color: var(--color-text-primary);
+
+  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-semibold);
-  line-height: 1.2;
-  text-decoration: none;
-  white-space: nowrap;
+  line-height: 1;
 
   cursor: pointer;
+
+  text-decoration: none;
+
   user-select: none;
 
   transition:
-    background-color var(--duration-fast) var(--ease-standard),
-    color var(--duration-fast) var(--ease-standard),
-    border-color var(--duration-fast) var(--ease-standard),
-    box-shadow var(--duration-fast) var(--ease-standard),
-    transform var(--duration-fast) var(--ease-standard);
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
-/* ===========================
-   Sizes
-=========================== */
+/* ==========================================================
+   LABEL
+========================================================== */
+
+.button-label {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ==========================================================
+   ICON
+========================================================== */
+
+.button-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 18px;
+  height: 18px;
+
+  flex-shrink: 0;
+}
+
+/* ==========================================================
+   PRIMARY
+========================================================== */
+
+.button--primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.button--primary:hover {
+  background: var(--color-primary-hover);
+}
+
+/* ==========================================================
+   SECONDARY
+========================================================== */
+
+.button--secondary {
+  background: var(--color-surface-secondary);
+  color: var(--color-text-primary);
+
+  border-color: var(--color-border);
+}
+
+.button--secondary:hover {
+  background: var(--color-background-secondary);
+}
+
+/* ==========================================================
+   OUTLINE
+========================================================== */
+
+.button--outline {
+  background: transparent;
+
+  color: var(--color-primary);
+
+  border-color: var(--color-primary);
+}
+
+.button--outline:hover {
+  background: var(--color-primary-light);
+}
+
+/* ==========================================================
+   GHOST
+========================================================== */
+
+.button--ghost {
+  background: transparent;
+
+  color: var(--color-text-primary);
+}
+
+.button--ghost:hover {
+  background: var(--color-background-secondary);
+}
+
+/* ==========================================================
+   SUCCESS
+========================================================== */
+
+.button--success {
+  background: var(--color-success);
+
+  color: var(--color-white);
+}
+
+.button--success:hover {
+  filter: brightness(.95);
+}
+
+/* ==========================================================
+   WARNING
+========================================================== */
+
+.button--warning {
+  background: var(--color-warning);
+
+  color: var(--color-white);
+}
+
+.button--warning:hover {
+  filter: brightness(.95);
+}
+
+/* ==========================================================
+   DANGER
+========================================================== */
+
+.button--danger {
+  background: var(--color-danger);
+
+  color: var(--color-white);
+}
+
+.button--danger:hover {
+  filter: brightness(.95);
+}
+
+/* ==========================================================
+   SIZES
+========================================================== */
 
 .button--sm {
   min-height: 36px;
-  padding: 0 var(--space-4);
-  font-size: var(--font-size-sm);
+
+  padding: var(--space-2) var(--space-4);
+
+  font-size: 0.875rem;
 }
 
 .button--md {
   min-height: 44px;
-  padding: 0 var(--space-5);
+
+  padding: var(--space-3) var(--space-5);
 }
 
 .button--lg {
   min-height: 52px;
-  padding: 0 var(--space-6);
-  font-size: var(--font-size-lg);
+
+  padding: var(--space-4) var(--space-6);
+
+  font-size: var(--font-size-base);
 }
 
-/* ===========================
-   Width
-=========================== */
+/* ==========================================================
+   FULL WIDTH
+========================================================== */
 
 .button--full {
   width: 100%;
 }
 
-/* ===========================
-   Primary
-=========================== */
+/* ==========================================================
+   LOADING
+========================================================== */
 
-.button--primary {
-  color: var(--color-white);
-  background: var(--color-primary);
+.button--loading {
+  cursor: wait;
+
+  opacity: .8;
 }
 
-.button--primary:hover:not(:disabled) {
-  background: var(--color-primary-hover);
-}
-
-/* ===========================
-   Secondary
-=========================== */
-
-.button--secondary {
-  color: var(--color-heading);
-  background: var(--color-surface);
-  border-color: var(--color-border);
-}
-
-.button--secondary:hover:not(:disabled) {
-  background: var(--color-background);
-}
-
-/* ===========================
-   Outline
-=========================== */
-
-.button--outline {
-  color: var(--color-primary);
-  background: transparent;
-  border-color: var(--color-primary);
-}
-
-.button--outline:hover:not(:disabled) {
-  color: var(--color-white);
-  background: var(--color-primary);
-}
-
-/* ===========================
-   Ghost
-=========================== */
-
-.button--ghost {
-  color: var(--color-heading);
-  background: transparent;
-}
-
-.button--ghost:hover:not(:disabled) {
-  background: var(--color-background);
-}
-
-/* ===========================
-   Success
-=========================== */
-
-.button--success {
-  color: var(--color-white);
-  background: var(--color-success);
-}
-
-.button--success:hover:not(:disabled) {
-  filter: brightness(.95);
-}
-
-/* ===========================
-   Danger
-=========================== */
-
-.button--danger {
-  color: var(--color-white);
-  background: var(--color-danger);
-}
-
-.button--danger:hover:not(:disabled) {
-  filter: brightness(.95);
-}
-
-/* ===========================
-   Active
-=========================== */
-
-.button:active:not(:disabled) {
-  transform: translateY(1px);
-}
-
-/* ===========================
-   Focus
-=========================== */
-
-.button:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 3px var(--color-primary-light);
-}
-
-/* ===========================
-   Disabled
-=========================== */
+/* ==========================================================
+   DISABLED
+========================================================== */
 
 .button:disabled {
-  opacity: .6;
+  opacity: .55;
+
   cursor: not-allowed;
+
   pointer-events: none;
 }
 
-/* ===========================
-   Reduced Motion
-=========================== */
+/* ==========================================================
+   ACTIVE
+========================================================== */
 
-@media (prefers-reduced-motion: reduce) {
-  .button {
-    transition: none;
-  }
+.button:active {
+  transform: translateY(1px);
+}
+
+/* ==========================================================
+   FOCUS
+========================================================== */
+
+.button:focus-visible {
+  outline: 2px solid var(--color-primary);
+
+  outline-offset: 3px;
 }

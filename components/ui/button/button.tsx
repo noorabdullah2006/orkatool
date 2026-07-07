@@ -1,32 +1,27 @@
-import type { ButtonHTMLAttributes, ReactNode } from "react";
+import Spinner from "../spinner";
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  children: ReactNode;
-  variant?:
-    | "primary"
-    | "secondary"
-    | "outline"
-    | "ghost"
-    | "success"
-    | "danger";
-  size?: "sm" | "md" | "lg";
-  fullWidth?: boolean;
-}
+import ButtonIcon from "./button-icon";
+
+import type { ButtonProps } from "./button.types";
 
 export default function Button({
   children,
   variant = "primary",
   size = "md",
   fullWidth = false,
+  loading = false,
+  leftIcon,
+  rightIcon,
   className = "",
-  type = "button",
+  disabled,
   ...props
 }: ButtonProps) {
   const classes = [
     "button",
     `button--${variant}`,
     `button--${size}`,
-    fullWidth && "button--full",
+    fullWidth ? "button--full" : "",
+    loading ? "button--loading" : "",
     className,
   ]
     .filter(Boolean)
@@ -34,11 +29,40 @@ export default function Button({
 
   return (
     <button
-      type={type}
       className={classes}
+      disabled={disabled || loading}
       {...props}
     >
-      {children}
+      {loading ? (
+        <>
+          <Spinner
+            size="sm"
+            color={variant === "primary" ? "white" : "primary"}
+          />
+
+          <span className="button-label">
+            {children}
+          </span>
+        </>
+      ) : (
+        <>
+          {leftIcon && (
+            <ButtonIcon>
+              {leftIcon}
+            </ButtonIcon>
+          )}
+
+          <span className="button-label">
+            {children}
+          </span>
+
+          {rightIcon && (
+            <ButtonIcon>
+              {rightIcon}
+            </ButtonIcon>
+          )}
+        </>
+      )}
     </button>
   );
 }
