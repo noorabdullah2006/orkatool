@@ -1,69 +1,71 @@
-import type { InputHTMLAttributes } from "react";
-
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-  label?: string;
-  helperText?: string;
-  error?: string;
-  fullWidth?: boolean;
-}
+import type { InputProps } from "./input.types";
 
 export default function Input({
   label,
   helperText,
   error,
+  leftIcon,
+  rightIcon,
   fullWidth = false,
   className = "",
   id,
   ...props
 }: InputProps) {
-  const inputClasses = [
+  const classes = [
     "input",
-    fullWidth && "input--full",
-    error && "input--error",
+    fullWidth ? "input--full" : "",
+    error ? "input--error" : "",
     className,
   ]
     .filter(Boolean)
     .join(" ");
 
   return (
-    <div className="input-group">
+    <div className="input-wrapper">
+
       {label && (
-        <label className="input-label" htmlFor={id}>
+        <label
+          htmlFor={id}
+          className="input-label"
+        >
           {label}
         </label>
       )}
 
-      <input
-        id={id}
-        className={inputClasses}
-        aria-invalid={!!error}
-        aria-describedby={
-          error
-            ? `${id}-error`
-            : helperText
-            ? `${id}-helper`
-            : undefined
-        }
-        {...props}
-      />
+      <div className="input-field">
+
+        {leftIcon && (
+          <span className="input-icon input-icon--left">
+            {leftIcon}
+          </span>
+        )}
+
+        <input
+          id={id}
+          className={classes}
+          {...props}
+        />
+
+        {rightIcon && (
+          <span className="input-icon input-icon--right">
+            {rightIcon}
+          </span>
+        )}
+
+      </div>
 
       {helperText && !error && (
-        <p
-          id={`${id}-helper`}
-          className="input-helper"
-        >
+        <p className="input-helper">
           {helperText}
         </p>
       )}
 
       {error && (
-        <p
-          id={`${id}-error`}
-          className="input-error"
-        >
+        <p className="input-error">
           {error}
         </p>
       )}
+
     </div>
   );
 }

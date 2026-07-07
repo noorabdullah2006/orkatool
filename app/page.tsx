@@ -1,62 +1,40 @@
-import Button from "@/components/ui/button";
+import Input from "@/components/ui/input";
 
 export default function HomePage() {
   return (
     <main
       style={{
-        padding: "40px",
+        maxWidth: "500px",
+        margin: "60px auto",
         display: "flex",
-        flexWrap: "wrap",
-        gap: "16px",
+        flexDirection: "column",
+        gap: "24px",
       }}
     >
-      <Button>
-        Primary
-      </Button>
+      <Input
+        id="name"
+        label="Your Name"
+        placeholder="Enter your name"
+      />
 
-      <Button variant="secondary">
-        Secondary
-      </Button>
+      <Input
+        id="email"
+        type="email"
+        label="Email"
+        helperText="We'll never share your email."
+      />
 
-      <Button variant="outline">
-        Outline
-      </Button>
+      <Input
+        id="password"
+        type="password"
+        label="Password"
+        error="Password is required."
+      />
 
-      <Button variant="ghost">
-        Ghost
-      </Button>
-
-      <Button variant="success">
-        Success
-      </Button>
-
-      <Button variant="warning">
-        Warning
-      </Button>
-
-      <Button variant="danger">
-        Danger
-      </Button>
-
-      <Button loading>
-        Saving...
-      </Button>
-
-      <Button
-        size="sm"
-      >
-        Small
-      </Button>
-
-      <Button
-        size="lg"
-      >
-        Large
-      </Button>
-
-      <Button fullWidth>
-        Full Width Button
-      </Button>
+      <Input
+        placeholder="Full Width"
+        fullWidth
+      />
     </main>
   );
 }
