@@ -1,0 +1,44 @@
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+@media (max-width: 1280px) {
+
+  .container {
+    max-width: 100%;
+    padding-inline: 2rem;
+  }
+
+}
+
+@media (max-width: 1024px) {
+
+  .container {
+    padding-inline: 1.75rem;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .container {
+    padding-inline: 1.25rem;
+  }
+
+}
+
+@media (max-width: 640px) {
+
+  .container {
+    padding-inline: 1rem;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .container {
+    padding-inline: .875rem;
+  }
+
+}

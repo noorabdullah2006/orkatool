@@ -1,0 +1,247 @@
+/* =========================================================
+   Header - Large Laptop
+========================================================= */
+
+@media (max-width:1200px){
+
+  .site-header-inner{
+    gap:1.5rem;
+  }
+
+  .site-navigation-list{
+    gap:1.5rem;
+  }
+
+}
+
+/* =========================================================
+   Header - Tablet
+========================================================= */
+
+@media (max-width:1024px){
+
+  .site-header-inner{
+
+    min-height:68px;
+
+    gap:1rem;
+
+  }
+
+  /* Hide Desktop Navigation */
+
+  .site-navigation{
+    display:none;
+  }
+
+  /* Compact Search */
+
+  .search-button-text,
+  .search-shortcut{
+    display:none;
+  }
+
+  .search-button{
+
+    width:44px;
+    height:44px;
+
+    padding:0;
+
+    justify-content:center;
+  }
+
+  /* Show Hamburger */
+
+  .mobile-menu-button{
+    display:flex;
+  }
+
+  /* Drawer Width */
+
+  .mobile-drawer{
+    width:340px;
+  }
+
+}
+
+/* =========================================================
+   Header - Small Tablet
+========================================================= */
+
+@media (max-width:768px){
+
+  .site-header{
+
+    backdrop-filter:blur(18px);
+
+  }
+
+  .site-header-inner{
+
+    min-height:66px;
+
+  }
+
+  .mobile-drawer{
+
+    width:320px;
+
+  }
+
+}
+
+/* =========================================================
+   Header - Mobile
+========================================================= */
+
+@media (max-width:640px){
+
+  .site-header-inner{
+
+    min-height:64px;
+
+    gap:.75rem;
+
+  }
+
+  /* Hide Search */
+
+  .search-button{
+    display:none;
+  }
+
+  /* Hide Theme */
+
+  .theme-toggle{
+    display:none;
+  }
+
+  /* Full Width Drawer */
+
+  .mobile-drawer{
+
+    width:100%;
+    max-width:100%;
+
+    padding:1.5rem;
+
+  }
+
+  .mobile-drawer-header{
+
+    margin-bottom:1.5rem;
+
+  }
+
+  .mobile-drawer-navigation
+  .site-navigation-list{
+
+    gap:1.2rem;
+
+  }
+
+  .mobile-drawer-actions{
+
+    margin-top:1.5rem;
+
+  }
+
+}
+
+/* =========================================================
+   Small Mobile
+========================================================= */
+
+@media (max-width:480px){
+
+  .site-header-inner{
+
+    min-height:60px;
+
+  }
+
+  .site-logo{
+
+    font-size:1.25rem;
+
+  }
+
+  .mobile-drawer{
+
+    padding:1.25rem;
+
+  }
+
+  .mobile-drawer-footer{
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:1rem;
+
+  }
+
+}
+
+/* =========================================================
+   Hamburger Animation
+========================================================= */
+
+.mobile-menu-open
+.mobile-menu-line:nth-child(1){
+
+  transform:
+    translateY(6px)
+    rotate(45deg);
+
+}
+
+.mobile-menu-open
+.mobile-menu-line:nth-child(2){
+
+  opacity:0;
+
+}
+
+.mobile-menu-open
+.mobile-menu-line:nth-child(3){
+
+  transform:
+    translateY(-6px)
+    rotate(-45deg);
+
+}
+
+/* =========================================================
+   Drawer Animation
+========================================================= */
+
+.mobile-drawer{
+
+  will-change:transform;
+
+}
+
+.mobile-overlay{
+
+  will-change:opacity;
+
+}
+
+/* =========================================================
+   Reduce Motion
+========================================================= */
+
+@media (prefers-reduced-motion:reduce){
+
+  .mobile-drawer,
+  .mobile-overlay,
+  .mobile-menu-line{
+
+    transition:none !important;
+
+  }
+
+}

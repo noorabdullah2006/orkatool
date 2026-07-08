@@ -1,0 +1,181 @@
+/* =========================================================
+   Categories Responsive
+========================================================= */
+
+/* =========================================================
+   Large Desktop
+========================================================= */
+
+@media (max-width:1200px){
+
+    .categories-grid{
+        grid-template-columns:repeat(4,minmax(0,1fr));
+        gap:1.5rem;
+    }
+
+}
+
+/* =========================================================
+   Tablet
+========================================================= */
+
+@media (max-width:992px){
+
+    .categories{
+        padding-block:5rem;
+    }
+
+    .categories-header{
+        margin-bottom:3rem;
+    }
+
+    .categories-grid{
+        grid-template-columns:repeat(3,minmax(0,1fr));
+        gap:1.25rem;
+    }
+
+}
+
+/* =========================================================
+   Mobile
+========================================================= */
+
+@media (max-width:768px){
+
+    .categories{
+
+        padding-block:4rem;
+
+    }
+
+    .categories-header{
+
+        margin-bottom:2.5rem;
+
+    }
+
+    .categories-title{
+
+        font-size:2rem;
+
+    }
+
+    .categories-description{
+
+        font-size:.95rem;
+
+    }
+
+    .categories-grid{
+
+        display:flex !important;
+
+        grid-template-columns:none !important;
+
+        grid-auto-flow:unset !important;
+
+        gap:1rem;
+
+        overflow-x:auto;
+
+        overflow-y:hidden;
+
+        flex-wrap:nowrap;
+
+        padding:0 1rem .5rem;
+
+        scroll-snap-type:x mandatory;
+
+        scrollbar-width:none;
+
+        -webkit-overflow-scrolling:touch;
+
+    }
+
+    .categories-grid::-webkit-scrollbar{
+
+        display:none;
+
+    }
+
+    .category-card{
+
+        flex:0 0 82%;
+
+        width:82%;
+
+        max-width:320px;
+
+        min-width:280px;
+
+        min-height:220px;
+
+        padding:2rem;
+
+        scroll-snap-align:start;
+
+    }
+
+    .category-card-icon{
+
+        width:64px;
+
+        height:64px;
+
+    }
+
+    .category-card-icon svg{
+
+        width:30px;
+
+        height:30px;
+
+    }
+
+}
+
+/* =========================================================
+   Small Mobile
+========================================================= */
+
+@media (max-width:480px){
+
+    .categories-grid{
+
+        padding-inline:.75rem;
+
+    }
+
+    .category-card{
+
+        flex:0 0 88%;
+
+        width:88%;
+
+        min-width:260px;
+
+        max-width:300px;
+
+        padding:1.75rem;
+
+    }
+
+    .category-card-title{
+
+        font-size:1.2rem;
+
+    }
+
+    .category-card-description{
+
+        font-size:.9rem;
+
+    }
+
+    .category-card-count{
+
+        font-size:.8rem;
+
+    }
+
+}

@@ -42,14 +42,6 @@
 @import "./components/divider.css";
 @import "./components/icon.css";
 
-/* Responsive */
-
-@import "./responsive/breakpoints.css";
-@import "./responsive/responsive.css";
-@import "./responsive/images.css";
-@import "./responsive/overflow.css";
-@import "./responsive/tables.css";
-
 /* Animations */
 
 @import "./animations/keyframes.css";
@@ -58,7 +50,15 @@
 /* Sections */
 
 @import "./sections/hero.css";
+@import "./sections/categories.css";
+@import "./sections/popular-tools.css";
+@import "./sections/why-choose.css";
 
 /* Theme */
 
 @import "./themes/light.css";
+
+
+/* Responsive */
+
+@import "./responsive/index.css";

@@ -1,24 +1,9 @@
-/* ==========================================
-   BREAKPOINTS
-   OrkaTool Design System v1.0
-========================================== */
+:root {
 
-/*
+  --bp-mobile: 640px;
+  --bp-tablet: 768px;
+  --bp-laptop: 1024px;
+  --bp-desktop: 1280px;
+  --bp-wide: 1536px;
 
-Mobile First
-
-320px+
-
-Tablet
-768px+
-
-Laptop
-1200px+
-
-Desktop XL
-1440px+
-
-Large Desktop
-1600px+
-
-*/
+}

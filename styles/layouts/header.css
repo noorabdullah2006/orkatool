@@ -1,6 +1,6 @@
-/* ==========================================================
-   HEADER
-========================================================== */
+/* =========================================================
+   Header
+========================================================= */
 
 .site-header {
   position: sticky;
@@ -9,322 +9,614 @@
 
   width: 100%;
 
-  background: var(--color-surface);
+  background: rgba(255,255,255,.88);
 
-  border-bottom: 1px solid var(--color-border);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(15,23,42,.06);
 
   transition:
-    background var(--transition-base),
-    border-color var(--transition-base),
-    box-shadow var(--transition-base);
+    background .3s ease,
+    border-color .3s ease,
+    box-shadow .3s ease;
 }
 
-/* ==========================================================
-   INNER
-========================================================== */
+/* =========================================================
+   Header Inner
+========================================================= */
 
 .site-header-inner {
-  display: flex;
 
-  align-items: center;
+  display:flex;
 
-  justify-content: space-between;
+  align-items:center;
 
-  min-height: 72px;
+  justify-content:space-between;
 
-  gap: var(--space-8);
+  gap:2rem;
+
+  min-height:72px;
+
 }
 
-/* ==========================================================
-   LOGO
-========================================================== */
+/* =========================================================
+   Logo
+========================================================= */
 
-.site-logo {
-  flex-shrink: 0;
+.site-logo{
 
-  color: var(--color-text-primary);
+  flex-shrink:0;
 
-  text-decoration: none;
+  text-decoration:none;
 
-  font-size: var(--font-size-xl);
+  color:var(--color-text-primary);
 
-  font-weight: var(--font-weight-bold);
+  font-size:1.45rem;
 
-  letter-spacing: -.02em;
+  font-weight:800;
 
-  transition: color var(--transition-fast);
+  letter-spacing:-.03em;
+
+  transition:.25s;
+
 }
 
-.site-logo:hover {
-  color: var(--color-primary);
+.site-logo:hover{
+
+  color:var(--color-primary);
+
 }
 
-/* ==========================================================
-   NAVIGATION
-========================================================== */
+/* =========================================================
+   Navigation
+========================================================= */
 
-.site-navigation {
-  flex: 1;
+.site-navigation{
 
-  display: flex;
+  flex:1;
 
-  justify-content: center;
+  display:flex;
+
+  justify-content:center;
+
 }
 
-.site-navigation-list {
-  display: flex;
+.site-navigation-list{
 
-  align-items: center;
+  display:flex;
 
-  gap: var(--space-8);
+  align-items:center;
 
-  margin: 0;
+  gap:2rem;
 
-  padding: 0;
+  margin:0;
 
-  list-style: none;
+  padding:0;
+
+  list-style:none;
+
 }
 
-.site-navigation-item {
-  margin: 0;
+.site-navigation-item{
+
+  margin:0;
+
 }
 
-.site-navigation-link {
-  position: relative;
+.site-navigation-link{
 
-  display: inline-flex;
+  position:relative;
 
-  align-items: center;
+  display:inline-flex;
 
-  color: var(--color-text-secondary);
+  align-items:center;
 
-  text-decoration: none;
+  color:var(--color-text-secondary);
 
-  font-size: var(--font-size-sm);
+  text-decoration:none;
 
-  font-weight: var(--font-weight-medium);
+  font-size:.95rem;
 
-  transition: color var(--transition-fast);
+  font-weight:600;
+
+  transition:
+    color .25s ease;
+
 }
 
-.site-navigation-link:hover {
-  color: var(--color-primary);
+.site-navigation-link:hover{
+
+  color:var(--color-primary);
+
 }
 
-.site-navigation-link::after {
-  content: "";
+.site-navigation-link::after{
 
-  position: absolute;
+  content:"";
 
-  left: 0;
+  position:absolute;
 
-  bottom: -8px;
+  left:0;
+  bottom:-10px;
 
-  width: 100%;
+  width:100%;
+  height:2px;
 
-  height: 2px;
+  background:var(--color-primary);
 
-  background: var(--color-primary);
+  border-radius:999px;
 
-  transform: scaleX(0);
+  transform:scaleX(0);
 
-  transform-origin: center;
+  transition:transform .25s ease;
 
-  transition: transform var(--transition-fast);
 }
 
-.site-navigation-link:hover::after {
-  transform: scaleX(1);
+.site-navigation-link:hover::after{
+
+  transform:scaleX(1);
+
 }
 
-/* ==========================================================
-   ACTIONS
-========================================================== */
+/* =========================================================
+   Header Actions
+========================================================= */
 
-.site-header-actions {
-  display: flex;
+.site-header-actions{
 
-  align-items: center;
+  display:flex;
 
-  gap: var(--space-3);
+  align-items:center;
 
-  flex-shrink: 0;
+  gap:.75rem;
+
+  flex-shrink:0;
+
 }
 
-/* ==========================================================
-   SEARCH
-========================================================== */
+/* =========================================================
+   Search Button
+========================================================= */
 
-.search-button {
-  display: inline-flex;
+.search-button{
 
-  align-items: center;
+  display:inline-flex;
 
-  gap: var(--space-2);
+  align-items:center;
 
-  padding: var(--space-2) var(--space-3);
+  gap:.65rem;
 
-  background: var(--color-surface);
+  padding:.7rem 1rem;
 
-  border: 1px solid var(--color-border);
+  background:#fff;
 
-  border-radius: var(--radius-lg);
+  border:1px solid var(--color-border);
 
-  color: var(--color-text-secondary);
+  border-radius:14px;
 
-  cursor: pointer;
+  cursor:pointer;
 
-  transition: all var(--transition-fast);
+  transition:.25s;
+
 }
 
-.search-button:hover {
-  color: var(--color-primary);
+.search-button:hover{
 
-  border-color: var(--color-primary);
+  border-color:var(--color-primary);
+
+  box-shadow:0 8px 22px rgba(37,99,235,.08);
+
 }
 
-.search-button-icon {
-  width: 18px;
+.search-button-icon{
 
-  height: 18px;
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  font-size:1rem;
+
 }
 
-.search-button-text {
-  font-size: var(--font-size-sm);
+.search-button-text{
+
+  color:var(--color-text-secondary);
+
+  font-size:.9rem;
+
+  font-weight:500;
+
 }
 
-.search-shortcut {
-  padding: 2px 6px;
+.search-shortcut{
 
-  border-radius: var(--radius-sm);
+  padding:.15rem .45rem;
 
-  background: var(--color-background-secondary);
+  border-radius:6px;
 
-  color: var(--color-text-muted);
+  background:#F8FAFC;
 
-  font-size: 11px;
+  color:#64748B;
 
-  font-family: monospace;
+  font-size:.72rem;
+
+  font-family:monospace;
+
 }
 
-/* ==========================================================
-   THEME TOGGLE
-========================================================== */
+/* =========================================================
+   Theme Toggle
+========================================================= */
 
-.theme-toggle {
-  display: inline-flex;
+.theme-toggle{
 
-  align-items: center;
+  display:flex;
 
-  justify-content: center;
+  align-items:center;
+  justify-content:center;
 
-  width: 42px;
+  width:44px;
+  height:44px;
 
-  height: 42px;
+  border:1px solid var(--color-border);
 
-  border: 1px solid var(--color-border);
+  border-radius:14px;
 
-  border-radius: var(--radius-lg);
+  background:#fff;
 
-  background: var(--color-surface);
+  cursor:pointer;
 
-  cursor: pointer;
+  transition:.25s;
 
-  transition: all var(--transition-fast);
 }
 
-.theme-toggle:hover {
-  color: var(--color-primary);
+.theme-toggle:hover{
 
-  border-color: var(--color-primary);
+  color:var(--color-primary);
+
+  border-color:var(--color-primary);
+
+  box-shadow:0 8px 22px rgba(37,99,235,.08);
+
 }
 
-/* ==========================================================
-   MOBILE MENU
-========================================================== */
+/* =========================================================
+   Mobile Menu Button (Base)
+========================================================= */
 
-.mobile-menu-button {
-  display: none;
+.mobile-menu-button{
 
-  align-items: center;
+  display:none;
 
-  justify-content: center;
+  align-items:center;
+  justify-content:center;
 
-  width: 44px;
+  width:44px;
+  height:44px;
 
-  height: 44px;
+  padding:0;
 
-  border: none;
+  border:1px solid var(--color-border);
 
-  border-radius: var(--radius-lg);
+  border-radius:14px;
 
-  background: transparent;
+  background:#fff;
 
-  cursor: pointer;
+  cursor:pointer;
+
+  transition:
+    background .25s ease,
+    border-color .25s ease,
+    box-shadow .25s ease;
+
 }
 
-.mobile-menu-icon {
-  display: flex;
+.mobile-menu-button:hover{
 
-  flex-direction: column;
+  border-color:var(--color-primary);
 
-  gap: 4px;
+  box-shadow:0 8px 20px rgba(37,99,235,.08);
+
 }
 
-.mobile-menu-line {
-  width: 22px;
+.mobile-menu-icon{
 
-  height: 2px;
+  display:flex;
 
-  border-radius: 999px;
+  flex-direction:column;
 
-  background: var(--color-text-primary);
+  justify-content:center;
 
-  transition: all var(--transition-fast);
+  gap:4px;
+
 }
 
-/* ==========================================================
-   FOCUS
-========================================================== */
+.mobile-menu-line{
+
+  width:20px;
+  height:2px;
+
+  border-radius:999px;
+
+  background:var(--color-text-primary);
+
+  transition:
+    transform .3s ease,
+    opacity .3s ease;
+
+}
+
+/* =========================================================
+   Mobile Drawer (Base)
+========================================================= */
+
+.mobile-drawer{
+
+  position:fixed;
+
+  top:0;
+  right:0;
+
+  width:340px;
+  max-width:90vw;
+
+  height:100vh;
+
+  display:flex;
+  flex-direction:column;
+
+  background:#fff;
+
+  border-left:1px solid var(--color-border);
+
+  box-shadow:-16px 0 40px rgba(15,23,42,.08);
+
+  transform:translateX(100%);
+
+  transition:transform .35s ease;
+
+  z-index:1100;
+
+  padding:1.5rem;
+
+}
+
+.mobile-drawer-open{
+
+  transform:translateX(0);
+
+}
+
+/* =========================================================
+   Drawer Header
+========================================================= */
+
+.mobile-drawer-header{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:1rem;
+
+  margin-bottom:2rem;
+
+}
+
+.mobile-drawer-close{
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  width:42px;
+  height:42px;
+
+  border:none;
+
+  border-radius:12px;
+
+  background:transparent;
+
+  color:var(--color-text-primary);
+
+  cursor:pointer;
+
+  transition:
+    background .25s ease,
+    color .25s ease;
+
+}
+
+.mobile-drawer-close:hover{
+
+  background:rgba(37,99,235,.08);
+
+  color:var(--color-primary);
+
+}
+
+/* =========================================================
+   Drawer Navigation
+========================================================= */
+
+.mobile-drawer-navigation{
+
+  flex:1;
+
+}
+
+.mobile-drawer-navigation .site-navigation{
+
+  display:block;
+
+}
+
+.mobile-drawer-navigation .site-navigation-list{
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:flex-start;
+
+  gap:1.4rem;
+
+}
+
+.mobile-drawer-navigation .site-navigation-link{
+
+  font-size:1rem;
+
+}
+
+.mobile-drawer-navigation .site-navigation-link::after{
+
+  display:none;
+
+}
+
+/* =========================================================
+   Divider
+========================================================= */
+
+.mobile-drawer-divider{
+
+  width:100%;
+
+  height:1px;
+
+  margin:2rem 0;
+
+  background:var(--color-border);
+
+}
+
+/* =========================================================
+   Drawer Actions
+========================================================= */
+
+.mobile-drawer-actions{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:1rem;
+
+}
+
+.mobile-drawer-actions .search-button{
+
+  width:100%;
+
+  justify-content:center;
+
+}
+
+.mobile-drawer-actions .theme-toggle{
+
+  width:100%;
+
+  height:48px;
+
+}
+
+/* =========================================================
+   Drawer Footer
+========================================================= */
+
+.mobile-drawer-footer{
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:1.5rem;
+
+  margin-top:2rem;
+
+  padding-top:1.5rem;
+
+  border-top:1px solid var(--color-border);
+
+}
+
+.mobile-footer-link{
+
+  color:var(--color-text-secondary);
+
+  text-decoration:none;
+
+  font-size:.9rem;
+
+  font-weight:600;
+
+  transition:color .25s ease;
+
+}
+
+.mobile-footer-link:hover{
+
+  color:var(--color-primary);
+
+}
+
+/* =========================================================
+   Overlay
+========================================================= */
+
+.mobile-overlay{
+
+  position:fixed;
+
+  inset:0;
+
+  border:none;
+
+  background:rgba(15,23,42,.45);
+
+  opacity:0;
+
+  visibility:hidden;
+
+  cursor:pointer;
+
+  transition:
+    opacity .3s ease,
+    visibility .3s ease;
+
+  z-index:1090;
+
+}
+
+.mobile-overlay-visible{
+
+  opacity:1;
+
+  visibility:visible;
+
+}
+
+/* =========================================================
+   Focus States
+========================================================= */
 
 .site-logo:focus-visible,
 .site-navigation-link:focus-visible,
 .search-button:focus-visible,
 .theme-toggle:focus-visible,
-.mobile-menu-button:focus-visible {
-  outline: 2px solid var(--color-primary);
+.mobile-menu-button:focus-visible,
+.mobile-drawer-close:focus-visible,
+.mobile-footer-link:focus-visible{
 
-  outline-offset: 4px;
-}
+  outline:2px solid var(--color-primary);
 
-/* ==========================================================
-   RESPONSIVE
-========================================================== */
-
-@media (max-width:1024px){
-
-  .site-navigation{
-    display:none;
-  }
-
-  .search-button-text,
-  .search-shortcut{
-    display:none;
-  }
-
-  .mobile-menu-button{
-    display:inline-flex;
-  }
-
-}
-
-@media (max-width:640px){
-
-  .site-header-inner{
-    min-height:64px;
-  }
+  outline-offset:4px;
 
 }
