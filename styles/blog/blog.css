@@ -1,0 +1,161 @@
+/* =========================================================
+   OrkaTool Blog Design System
+========================================================= */
+
+/* =========================================================
+   Foundation
+========================================================= */
+
+@import "./typography.css";
+
+/* =========================================================
+   Sections
+========================================================= */
+
+@import "./hero.css";
+
+@import "./toc.css";
+
+@import "./steps.css";
+
+@import "./comparison.css";
+
+@import "./faq.css";
+
+@import "./cta.css";
+
+@import "./blog-card.css";
+
+/* =========================================================
+   Components
+========================================================= */
+
+@import "./table.css";
+
+@import "./code.css";
+
+@import "./alerts.css";
+
+/* =========================================================
+   Responsive
+========================================================= */
+
+@import "./responsive.css";
+
+/* =========================================================
+   Blog Listing Layout
+========================================================= */
+
+.blog-list {
+
+  width: 100%;
+
+  max-width: 1280px;
+
+  margin: 0 auto;
+
+  padding: 80px 20px;
+
+}
+
+.blog-list-header {
+
+  text-align: center;
+
+  margin-bottom: 70px;
+
+}
+
+.blog-list-title {
+
+  margin: 0;
+
+  font-size: clamp(2.5rem, 6vw, 4rem);
+
+  font-weight: 800;
+
+  line-height: 1.1;
+
+  color: var(--heading-color);
+
+}
+
+.blog-list-description {
+
+  max-width: 760px;
+
+  margin: 24px auto 0;
+
+  font-size: 1.1rem;
+
+  line-height: 1.8;
+
+  color: var(--text-light);
+
+}
+
+/* =========================================================
+   Blog Grid
+========================================================= */
+
+.blog-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 32px;
+
+  align-items: stretch;
+
+}
+
+/* =========================================================
+   Blog Empty State
+========================================================= */
+
+.blog-empty {
+
+  text-align: center;
+
+  padding: 80px 20px;
+
+}
+
+.blog-empty-title {
+
+  margin-bottom: 12px;
+
+  font-size: 2rem;
+
+  font-weight: 700;
+
+}
+
+.blog-empty-text {
+
+  max-width: 550px;
+
+  margin: 0 auto;
+
+  color: var(--text-light);
+
+  line-height: 1.8;
+
+}
+
+/* =========================================================
+   Common Spacing
+========================================================= */
+
+.blog-section {
+
+  margin-top: 80px;
+
+}
+
+.blog-section:first-child {
+
+  margin-top: 0;
+
+}

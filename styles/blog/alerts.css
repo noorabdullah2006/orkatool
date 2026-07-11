@@ -1,0 +1,177 @@
+/* =========================================================
+   Blog Alerts
+========================================================= */
+
+.blog-alert{
+
+  display:flex;
+
+  align-items:flex-start;
+
+  gap:1rem;
+
+  margin-block:2rem;
+
+  padding:1.5rem;
+
+  border-radius:18px;
+
+  border:1px solid transparent;
+
+}
+
+/* =========================================================
+   Icon
+========================================================= */
+
+.blog-alert-icon{
+
+  flex-shrink:0;
+
+  width:46px;
+
+  height:46px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  border-radius:50%;
+
+  font-size:1.25rem;
+
+}
+
+/* =========================================================
+   Content
+========================================================= */
+
+.blog-alert-content{
+
+  flex:1;
+
+}
+
+.blog-alert-title{
+
+  margin:0 0 .5rem;
+
+  font-size:1.05rem;
+
+  font-weight:700;
+
+  color:var(--color-text-heading);
+
+}
+
+.blog-alert-content p{
+
+  margin:0;
+
+  color:var(--color-text-secondary);
+
+  line-height:1.75;
+
+}
+
+/* =========================================================
+   Info
+========================================================= */
+
+.blog-alert-info{
+
+  background:#eff6ff;
+
+  border-color:#bfdbfe;
+
+}
+
+.blog-alert-info .blog-alert-icon{
+
+  background:#dbeafe;
+
+  color:#2563eb;
+
+}
+
+/* =========================================================
+   Success
+========================================================= */
+
+.blog-alert-success{
+
+  background:#ecfdf5;
+
+  border-color:#a7f3d0;
+
+}
+
+.blog-alert-success .blog-alert-icon{
+
+  background:#d1fae5;
+
+  color:#16a34a;
+
+}
+
+/* =========================================================
+   Warning
+========================================================= */
+
+.blog-alert-warning{
+
+  background:#fff7ed;
+
+  border-color:#fed7aa;
+
+}
+
+.blog-alert-warning .blog-alert-icon{
+
+  background:#ffedd5;
+
+  color:#ea580c;
+
+}
+
+/* =========================================================
+   Danger
+========================================================= */
+
+.blog-alert-danger{
+
+  background:#fef2f2;
+
+  border-color:#fecaca;
+
+}
+
+.blog-alert-danger .blog-alert-icon{
+
+  background:#fee2e2;
+
+  color:#dc2626;
+
+}
+
+/* =========================================================
+   Tip
+========================================================= */
+
+.blog-alert-tip{
+
+  background:#f5f3ff;
+
+  border-color:#ddd6fe;
+
+}
+
+.blog-alert-tip .blog-alert-icon{
+
+  background:#ede9fe;
+
+  color:#7c3aed;
+
+}

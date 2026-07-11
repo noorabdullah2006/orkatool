@@ -1,0 +1,157 @@
+/* =========================================================
+   Blog Tables
+========================================================= */
+
+.blog-table-wrapper{
+
+  width:100%;
+
+  overflow-x:auto;
+
+  margin-block:2.5rem;
+
+  border:1px solid var(--color-border);
+
+  border-radius:20px;
+
+  background:var(--color-surface-primary);
+
+}
+
+.blog-table{
+
+  width:100%;
+
+  border-collapse:collapse;
+
+  min-width:700px;
+
+}
+
+/* =========================================================
+   Head
+========================================================= */
+
+.blog-table thead{
+
+  background:var(--color-surface-secondary);
+
+}
+
+.blog-table th{
+
+  padding:1rem 1.25rem;
+
+  text-align:left;
+
+  font-weight:700;
+
+  color:var(--color-text-heading);
+
+  white-space:nowrap;
+
+  border-bottom:1px solid var(--color-border);
+
+}
+
+/* =========================================================
+   Body
+========================================================= */
+
+.blog-table td{
+
+  padding:1rem 1.25rem;
+
+  color:var(--color-text-secondary);
+
+  border-bottom:1px solid var(--color-border);
+
+  vertical-align:top;
+
+}
+
+.blog-table tbody tr:last-child td{
+
+  border-bottom:none;
+
+}
+
+/* =========================================================
+   Hover
+========================================================= */
+
+.blog-table tbody tr{
+
+  transition:.25s;
+
+}
+
+.blog-table tbody tr:hover{
+
+  background:var(--color-surface-secondary);
+
+}
+
+/* =========================================================
+   Alignment Helpers
+========================================================= */
+
+.blog-table-center{
+
+  text-align:center;
+
+}
+
+.blog-table-right{
+
+  text-align:right;
+
+}
+
+/* =========================================================
+   Success
+========================================================= */
+
+.blog-success{
+
+  color:#16a34a;
+
+  font-weight:600;
+
+}
+
+/* =========================================================
+   Danger
+========================================================= */
+
+.blog-danger{
+
+  color:#dc2626;
+
+  font-weight:600;
+
+}
+
+/* =========================================================
+   Warning
+========================================================= */
+
+.blog-warning{
+
+  color:#d97706;
+
+  font-weight:600;
+
+}
+
+/* =========================================================
+   Info
+========================================================= */
+
+.blog-info{
+
+  color:var(--color-primary);
+
+  font-weight:600;
+
+}

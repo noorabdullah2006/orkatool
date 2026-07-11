@@ -1,0 +1,239 @@
+/* =========================================================
+   Code Block
+========================================================= */
+
+.blog-code{
+
+  position:relative;
+
+  margin-block:2rem;
+
+  overflow:hidden;
+
+  border:1px solid var(--color-border);
+
+  border-radius:20px;
+
+  background:#0f172a;
+
+}
+
+/* =========================================================
+   Header
+========================================================= */
+
+.blog-code-header{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  padding:1rem 1.25rem;
+
+  border-bottom:1px solid rgba(255,255,255,.08);
+
+  background:#111827;
+
+}
+
+.blog-code-title{
+
+  color:#f8fafc;
+
+  font-size:.9rem;
+
+  font-weight:600;
+
+}
+
+.blog-code-language{
+
+  color:#94a3b8;
+
+  font-size:.8rem;
+
+  text-transform:uppercase;
+
+  letter-spacing:.08em;
+
+}
+
+/* =========================================================
+   Copy Button
+========================================================= */
+
+.blog-code-copy{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:.4rem;
+
+  padding:.55rem .9rem;
+
+  border:none;
+
+  border-radius:10px;
+
+  background:rgba(255,255,255,.08);
+
+  color:#fff;
+
+  cursor:pointer;
+
+  transition:.25s;
+
+}
+
+.blog-code-copy:hover{
+
+  background:rgba(255,255,255,.15);
+
+}
+
+/* =========================================================
+   Pre
+========================================================= */
+
+.blog-code pre{
+
+  overflow:auto;
+
+  padding:1.5rem;
+
+  margin:0;
+
+  color:#f8fafc;
+
+  font-size:.95rem;
+
+  line-height:1.8;
+
+  font-family:
+
+    Consolas,
+
+    Monaco,
+
+    Menlo,
+
+    monospace;
+
+}
+
+/* =========================================================
+   Code
+========================================================= */
+
+.blog-code code{
+
+  white-space:pre;
+
+}
+
+/* =========================================================
+   Inline Code
+========================================================= */
+
+.blog-content code{
+
+  padding:.2rem .45rem;
+
+  border-radius:6px;
+
+  background:var(--color-surface-secondary);
+
+  color:#e11d48;
+
+  font-size:.9em;
+
+  font-family:
+
+    Consolas,
+
+    Monaco,
+
+    monospace;
+
+}
+
+/* =========================================================
+   Scrollbar
+========================================================= */
+
+.blog-code pre::-webkit-scrollbar{
+
+  height:8px;
+
+}
+
+.blog-code pre::-webkit-scrollbar-thumb{
+
+  background:rgba(255,255,255,.2);
+
+  border-radius:999px;
+
+}
+
+.blog-code pre::-webkit-scrollbar-track{
+
+  background:transparent;
+
+}
+
+/* =========================================================
+   Terminal
+========================================================= */
+
+.blog-terminal{
+
+  background:#020617;
+
+}
+
+.blog-terminal .blog-code-header{
+
+  background:#000;
+
+}
+
+.blog-terminal pre{
+
+  color:#22c55e;
+
+}
+
+/* =========================================================
+   Formula
+========================================================= */
+
+.blog-formula{
+
+  margin-block:2rem;
+
+  padding:1.5rem;
+
+  border-radius:18px;
+
+  background:var(--color-surface-secondary);
+
+  border:1px solid var(--color-border);
+
+  text-align:center;
+
+}
+
+.blog-formula code{
+
+  background:none;
+
+  color:var(--color-primary);
+
+  font-size:1.2rem;
+
+  font-weight:700;
+
+}

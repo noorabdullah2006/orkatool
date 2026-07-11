@@ -1,0 +1,375 @@
+/* =========================================================
+   Latest Articles Section
+========================================================= */
+
+.latest-articles {
+
+  position: relative;
+
+  padding-block: clamp(4rem, 7vw, 7rem);
+
+  background:
+    linear-gradient(
+      to bottom,
+      #ffffff,
+      #f8fbff
+    );
+
+  border-top: 1px solid rgba(15, 23, 42, .05);
+
+}
+
+/* =========================================================
+   Header
+========================================================= */
+
+.latest-articles-header {
+
+  max-width: 720px;
+
+  margin-inline: auto;
+
+  margin-bottom: 4rem;
+
+  text-align: center;
+
+}
+
+.latest-articles-title {
+
+  margin: 0;
+
+  color: var(--color-text-primary);
+
+  font-size: clamp(2rem, 4vw, 3rem);
+
+  font-weight: 800;
+
+  line-height: 1.1;
+
+  letter-spacing: -.03em;
+
+}
+
+.latest-articles-description {
+
+  max-width: 620px;
+
+  margin: 1rem auto 0;
+
+  color: var(--color-text-secondary);
+
+  font-size: 1.05rem;
+
+  line-height: 1.8;
+
+}
+
+/* =========================================================
+   Grid
+========================================================= */
+
+.latest-articles-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 1.75rem;
+
+}
+
+/* =========================================================
+   Card
+========================================================= */
+
+.article-card {
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 26px;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(15, 23, 42, .08);
+
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    border-color .35s ease;
+
+}
+
+.article-card:hover {
+
+  transform: translateY(-10px);
+
+  border-color: rgba(37,99,235,.20);
+
+  box-shadow:
+    0 24px 50px rgba(37,99,235,.12);
+
+}
+
+.article-card-link {
+
+  display: flex;
+
+  flex-direction: column;
+
+  height: 100%;
+
+  color: inherit;
+
+  text-decoration: none;
+
+}
+
+.article-card-link:hover,
+.article-card-link:focus,
+.article-card-link:active,
+.article-card-link:visited {
+
+  text-decoration: none;
+
+}
+
+/* =========================================================
+   Image
+========================================================= */
+
+.article-card-image-wrapper {
+
+  position: relative;
+
+  overflow: hidden;
+
+  aspect-ratio: 16 / 9;
+
+  background: #eef4ff;
+
+}
+
+.article-card-image {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform .45s ease;
+
+}
+
+.article-card:hover .article-card-image {
+
+  transform: scale(1.08);
+
+}
+
+/* =========================================================
+   Content
+========================================================= */
+
+.article-card-content {
+
+  display: flex;
+
+  flex-direction: column;
+
+  flex: 1;
+
+  padding: 1.75rem;
+
+}
+
+/* =========================================================
+   Category
+========================================================= */
+
+.article-card-category {
+
+  align-self: flex-start;
+
+  margin-bottom: 1rem;
+
+  padding: .45rem .9rem;
+
+  border-radius: 999px;
+
+  background: #eef4ff;
+
+  color: var(--color-primary);
+
+  font-size: .78rem;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: .04em;
+
+}
+
+/* =========================================================
+   Title
+========================================================= */
+
+.article-card-title {
+
+  margin: 0;
+
+  color: var(--color-text-primary);
+
+  font-size: 1.35rem;
+
+  font-weight: 700;
+
+  line-height: 1.4;
+
+  transition: color .25s ease;
+
+}
+
+.article-card:hover .article-card-title {
+
+  color: var(--color-primary);
+
+}
+
+/* =========================================================
+   Excerpt
+========================================================= */
+
+.article-card-excerpt {
+
+  margin-top: 1rem;
+
+  color: var(--color-text-secondary);
+
+  font-size: .96rem;
+
+  line-height: 1.8;
+
+}
+
+/* =========================================================
+   Footer
+========================================================= */
+
+.article-card-footer {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  margin-top: auto;
+
+  padding: 1.4rem 1.75rem;
+
+  border-top: 1px solid rgba(15,23,42,.06);
+
+}
+
+.article-card-date {
+
+  color: var(--color-text-muted);
+
+  font-size: .88rem;
+
+}
+
+.article-card-reading-time {
+
+  color: var(--color-primary);
+
+  font-size: .88rem;
+
+  font-weight: 700;
+
+}
+
+/* =========================================================
+   Actions
+========================================================= */
+
+.latest-articles-actions {
+
+  display: flex;
+
+  justify-content: center;
+
+  margin-top: 4rem;
+
+}
+
+.latest-articles-button {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: .95rem 1.75rem;
+
+  border-radius: 999px;
+
+  background: var(--color-primary);
+
+  color: #ffffff;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+
+}
+
+.latest-articles-button:hover {
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 14px 30px rgba(37,99,235,.25);
+
+}
+
+/* =========================================================
+   Focus
+========================================================= */
+
+.article-card-link:focus-visible,
+.latest-articles-button:focus-visible {
+
+  outline: 2px solid var(--color-primary);
+
+  outline-offset: 4px;
+
+}
+
+/* =========================================================
+   Reduced Motion
+========================================================= */
+
+@media (prefers-reduced-motion: reduce){
+
+  .article-card,
+  .article-card-image,
+  .latest-articles-button{
+
+    transition: none;
+
+  }
+
+}

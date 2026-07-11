@@ -1,0 +1,305 @@
+/* =========================================================
+   Blog Responsive
+========================================================= */
+
+/* =========================================================
+   Laptop
+========================================================= */
+
+@media (max-width:1200px){
+
+  .blog-content,
+  .blog-hero-container{
+
+    max-width:760px;
+
+  }
+
+}
+
+/* =========================================================
+   Tablet
+========================================================= */
+
+@media (max-width:992px){
+
+  .blog-hero{
+
+    padding-block:4rem 3rem;
+
+  }
+
+  .blog-title{
+
+    font-size:clamp(2.2rem,5vw,3.2rem);
+
+  }
+
+  .blog-description{
+
+    font-size:1.05rem;
+
+  }
+
+  .blog-content{
+
+    font-size:1rem;
+
+  }
+
+  .blog-comparison{
+
+    grid-template-columns:1fr;
+
+  }
+
+  .blog-cta{
+
+    padding:2.5rem;
+
+  }
+
+}
+
+/* =========================================================
+   Mobile
+========================================================= */
+
+@media (max-width:768px){
+
+  .blog-hero{
+
+    padding-block:3rem 2.5rem;
+
+  }
+
+  .blog-title{
+
+    font-size:2rem;
+
+    line-height:1.2;
+
+  }
+
+  .blog-description{
+
+    font-size:1rem;
+
+  }
+
+  .blog-meta{
+
+    gap:.75rem;
+
+  }
+
+  .blog-content{
+
+    font-size:1rem;
+
+    line-height:1.8;
+
+  }
+
+  .blog-content h2{
+
+    font-size:1.75rem;
+
+  }
+
+  .blog-content h3{
+
+    font-size:1.45rem;
+
+  }
+
+  .blog-table{
+
+    min-width:620px;
+
+  }
+
+  .blog-code pre{
+
+    padding:1.25rem;
+
+    font-size:.9rem;
+
+  }
+
+  .blog-step{
+
+    gap:1rem;
+
+  }
+
+  .blog-step-number{
+
+    width:48px;
+
+    height:48px;
+
+    font-size:1rem;
+
+  }
+
+  .blog-step:not(:last-child)::before{
+
+    left:24px;
+
+  }
+
+  .blog-step-content{
+
+    padding:1.25rem;
+
+  }
+
+  .blog-alert{
+
+    padding:1.25rem;
+
+  }
+
+  .blog-alert-icon{
+
+    width:40px;
+
+    height:40px;
+
+  }
+
+  .blog-toc{
+
+    padding:1.5rem;
+
+  }
+
+  .blog-cta{
+
+    padding:2rem 1.5rem;
+
+  }
+
+  .blog-cta-actions{
+
+    flex-direction:column;
+
+  }
+
+  .blog-cta-button,
+  .blog-cta-button-outline{
+
+    width:100%;
+
+    min-width:unset;
+
+  }
+
+}
+
+/* =========================================================
+   Small Mobile
+========================================================= */
+
+@media (max-width:480px){
+
+  .blog-title{
+
+    font-size:1.75rem;
+
+  }
+
+  .blog-description{
+
+    font-size:.95rem;
+
+  }
+
+  .blog-content{
+
+    font-size:.96rem;
+
+  }
+
+  .blog-content h2{
+
+    font-size:1.5rem;
+
+  }
+
+  .blog-content h3{
+
+    font-size:1.3rem;
+
+  }
+
+  .blog-content img{
+
+    border-radius:14px;
+
+  }
+
+  .blog-faq-question{
+
+    padding:1.1rem;
+
+    font-size:1rem;
+
+  }
+
+  .blog-faq-answer{
+
+    padding:0 1.1rem 1.1rem;
+
+  }
+
+  .blog-step{
+
+    flex-direction:column;
+
+  }
+
+  .blog-step:not(:last-child)::before{
+
+    display:none;
+
+  }
+
+  .blog-step-number{
+
+    width:44px;
+
+    height:44px;
+
+  }
+
+  .blog-comparison-card{
+
+    padding:1.5rem;
+
+  }
+
+  .blog-alert{
+
+    flex-direction:column;
+
+  }
+
+  .blog-alert-icon{
+
+    width:42px;
+
+    height:42px;
+
+  }
+
+  .blog-code-header{
+
+    flex-wrap:wrap;
+
+    gap:.75rem;
+
+  }
+
+}

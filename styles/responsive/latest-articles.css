@@ -1,0 +1,211 @@
+/* =========================================================
+   Latest Articles Responsive
+========================================================= */
+
+/* =========================================================
+   Large Laptop
+========================================================= */
+
+@media (max-width:1200px){
+
+  .latest-articles-grid{
+
+    grid-template-columns:repeat(3,minmax(0,1fr));
+
+    gap:1.5rem;
+
+  }
+
+}
+
+/* =========================================================
+   Tablet
+========================================================= */
+
+@media (max-width:992px){
+
+  .latest-articles{
+
+    padding-block:5rem;
+
+  }
+
+  .latest-articles-header{
+
+    margin-bottom:3rem;
+
+  }
+
+  .latest-articles-grid{
+
+    grid-template-columns:repeat(2,minmax(0,1fr));
+
+    gap:1.5rem;
+
+  }
+
+}
+
+/* =========================================================
+   Mobile
+========================================================= */
+
+@media (max-width:768px){
+
+  .latest-articles{
+
+    padding-block:4rem;
+
+  }
+
+  .latest-articles-header{
+
+    margin-bottom:2.5rem;
+
+  }
+
+  .latest-articles-title{
+
+    font-size:2rem;
+
+  }
+
+  .latest-articles-description{
+
+    font-size:.95rem;
+
+  }
+
+  .latest-articles-grid{
+
+    display:flex;
+
+    overflow-x:auto;
+
+    overflow-y:hidden;
+
+    gap:1rem;
+
+    padding-inline:1rem;
+
+    padding-bottom:.5rem;
+
+    scroll-snap-type:x mandatory;
+
+    -webkit-overflow-scrolling:touch;
+
+    scrollbar-width:none;
+
+  }
+
+  .latest-articles-grid::-webkit-scrollbar{
+
+    display:none;
+
+  }
+
+  .article-card{
+
+    flex:0 0 320px;
+
+    width:320px;
+
+    scroll-snap-align:start;
+
+    border-radius:22px;
+
+  }
+
+  .article-card-content{
+
+    padding:1.5rem;
+
+  }
+
+  .article-card-footer{
+
+    padding:1.25rem 1.5rem;
+
+  }
+
+  .article-card-title{
+
+    font-size:1.2rem;
+
+  }
+
+  .article-card-excerpt{
+
+    font-size:.9rem;
+
+  }
+
+}
+
+/* =========================================================
+   Small Mobile
+========================================================= */
+
+@media (max-width:480px){
+
+  .latest-articles-grid{
+
+    padding-inline:.75rem;
+
+  }
+
+  .article-card{
+
+    flex:0 0 280px;
+
+    width:280px;
+
+  }
+
+  .article-card-content{
+
+    padding:1.25rem;
+
+  }
+
+  .article-card-footer{
+
+    padding:1rem 1.25rem;
+
+  }
+
+  .article-card-title{
+
+    font-size:1.1rem;
+
+  }
+
+  .article-card-category{
+
+    font-size:.72rem;
+
+  }
+
+  .article-card-date,
+
+  .article-card-reading-time{
+
+    font-size:.8rem;
+
+  }
+
+  .latest-articles-actions{
+
+    margin-top:3rem;
+
+  }
+
+  .latest-articles-button{
+
+    width:100%;
+
+    max-width:280px;
+
+  }
+
+}

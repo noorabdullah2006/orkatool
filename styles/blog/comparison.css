@@ -1,0 +1,183 @@
+/* =========================================================
+   Comparison Section
+========================================================= */
+
+.blog-comparison{
+
+  display:grid;
+
+  grid-template-columns:repeat(2,minmax(0,1fr));
+
+  gap:1.5rem;
+
+  margin-block:3rem;
+
+}
+
+/* =========================================================
+   Card
+========================================================= */
+
+.blog-comparison-card{
+
+  display:flex;
+
+  flex-direction:column;
+
+  padding:2rem;
+
+  border:1px solid var(--color-border);
+
+  border-radius:24px;
+
+  background:var(--color-surface-primary);
+
+  box-shadow:var(--shadow-sm);
+
+}
+
+/* =========================================================
+   Header
+========================================================= */
+
+.blog-comparison-header{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:.75rem;
+
+  margin-bottom:1.5rem;
+
+}
+
+.blog-comparison-icon{
+
+  width:52px;
+
+  height:52px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  border-radius:16px;
+
+  font-size:1.35rem;
+
+  background:var(--color-primary-50);
+
+  color:var(--color-primary);
+
+}
+
+.blog-comparison-title{
+
+  margin:0;
+
+  font-size:1.35rem;
+
+  font-weight:700;
+
+  color:var(--color-text-heading);
+
+}
+
+/* =========================================================
+   List
+========================================================= */
+
+.blog-comparison-list{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:.9rem;
+
+  padding:0;
+
+  margin:0;
+
+  list-style:none;
+
+}
+
+.blog-comparison-list li{
+
+  display:flex;
+
+  align-items:flex-start;
+
+  gap:.75rem;
+
+  color:var(--color-text-secondary);
+
+  line-height:1.7;
+
+}
+
+.blog-comparison-list li::before{
+
+  content:"✓";
+
+  color:#16a34a;
+
+  font-weight:700;
+
+  flex-shrink:0;
+
+}
+
+/* =========================================================
+   Negative
+========================================================= */
+
+.blog-comparison-negative li::before{
+
+  content:"✕";
+
+  color:#dc2626;
+
+}
+
+/* =========================================================
+   Footer
+========================================================= */
+
+.blog-comparison-footer{
+
+  margin-top:auto;
+
+  padding-top:1.5rem;
+
+}
+
+/* =========================================================
+   Badge
+========================================================= */
+
+.blog-comparison-badge{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  padding:.55rem 1rem;
+
+  border-radius:999px;
+
+  background:var(--color-primary-50);
+
+  color:var(--color-primary);
+
+  font-size:.85rem;
+
+  font-weight:600;
+
+}

@@ -1,0 +1,152 @@
+/* =========================================================
+   FAQ Section
+========================================================= */
+
+.blog-faq{
+
+  margin-block:4rem;
+
+}
+
+/* =========================================================
+   FAQ Item
+========================================================= */
+
+.blog-faq-item{
+
+  border:1px solid var(--color-border);
+
+  border-radius:18px;
+
+  background:var(--color-surface-primary);
+
+  overflow:hidden;
+
+  transition:border-color .25s ease,
+             box-shadow .25s ease;
+
+}
+
+.blog-faq-item + .blog-faq-item{
+
+  margin-top:1rem;
+
+}
+
+.blog-faq-item:hover{
+
+  border-color:var(--color-primary);
+
+  box-shadow:var(--shadow-sm);
+
+}
+
+/* =========================================================
+   Summary
+========================================================= */
+
+.blog-faq-question{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:1rem;
+
+  padding:1.35rem 1.5rem;
+
+  cursor:pointer;
+
+  list-style:none;
+
+  font-size:1.1rem;
+
+  font-weight:700;
+
+  color:var(--color-text-heading);
+
+}
+
+.blog-faq-question::-webkit-details-marker{
+
+  display:none;
+
+}
+
+/* =========================================================
+   Icon
+========================================================= */
+
+.blog-faq-icon{
+
+  flex-shrink:0;
+
+  width:34px;
+
+  height:34px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  border-radius:50%;
+
+  background:var(--color-primary-50);
+
+  color:var(--color-primary);
+
+  font-size:1.2rem;
+
+  font-weight:700;
+
+  transition:transform .25s ease;
+
+}
+
+.blog-faq-item[open] .blog-faq-icon{
+
+  transform:rotate(45deg);
+
+}
+
+/* =========================================================
+   Answer
+========================================================= */
+
+.blog-faq-answer{
+
+  padding:0 1.5rem 1.5rem;
+
+  color:var(--color-text-secondary);
+
+  line-height:1.8;
+
+}
+
+.blog-faq-answer p:last-child{
+
+  margin-bottom:0;
+
+}
+
+/* =========================================================
+   Links
+========================================================= */
+
+.blog-faq-answer a{
+
+  color:var(--color-primary);
+
+  text-decoration:none;
+
+}
+
+.blog-faq-answer a:hover{
+
+  text-decoration:underline;
+
+}

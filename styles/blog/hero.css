@@ -1,0 +1,137 @@
+/* =========================================================
+   Blog Hero
+========================================================= */
+
+.blog-hero{
+
+  padding-block:5rem 4rem;
+
+}
+
+.blog-hero-container{
+
+  max-width:900px;
+
+  margin-inline:auto;
+
+}
+
+.blog-badge{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:.5rem;
+
+  padding:.5rem 1rem;
+
+  margin-bottom:1.5rem;
+
+  border-radius:999px;
+
+  background:var(--color-primary-50);
+
+  color:var(--color-primary);
+
+  font-size:.85rem;
+
+  font-weight:600;
+
+}
+
+.blog-title{
+
+  margin:0;
+
+  font-size:clamp(2.5rem,5vw,4rem);
+
+  font-weight:800;
+
+  line-height:1.15;
+
+  letter-spacing:-.03em;
+
+  color:var(--color-text-heading);
+
+}
+
+.blog-description{
+
+  max-width:760px;
+
+  margin-top:1.5rem;
+
+  font-size:1.15rem;
+
+  line-height:1.9;
+
+  color:var(--color-text-secondary);
+
+}
+
+/* =========================================================
+   Meta
+========================================================= */
+
+.blog-meta{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  align-items:center;
+
+  gap:1rem;
+
+  margin-top:2rem;
+
+}
+
+.blog-meta-item{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:.45rem;
+
+  color:var(--color-text-muted);
+
+  font-size:.95rem;
+
+}
+
+.blog-meta-dot{
+
+  width:4px;
+
+  height:4px;
+
+  border-radius:50%;
+
+  background:var(--color-border);
+
+}
+
+/* =========================================================
+   Hero Image
+========================================================= */
+
+.blog-cover{
+
+  margin-top:3rem;
+
+}
+
+.blog-cover img{
+
+  width:100%;
+
+  display:block;
+
+  border-radius:24px;
+
+  box-shadow:0 20px 60px rgba(0,0,0,.08);
+
+}
