@@ -46,12 +46,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description,
     keywords: tool.keywords,
     alternates: {
-      canonical: `/tools/${tool.slug}`,
+      canonical: `/calculator-tools/${tool.slug}`,
     },
     openGraph: {
       title,
       description,
-      url: `https://orkatool.com/tools/${tool.slug}`,
+      url: `https://orkatool.com/calculator-tools/${tool.slug}`,
       type: "website",
     },
     twitter: {
@@ -77,7 +77,7 @@ export default async function ToolPage({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     name: tool.title,
-    url: `https://orkatool.com/tools/${tool.slug}`,
+    url: `https://orkatool.com/calculator-tools/${tool.slug}`,
     description: seoDescription,
     applicationCategory: "UtilitiesApplication",
     operatingSystem: "All",
@@ -93,8 +93,8 @@ export default async function ToolPage({ params }: Props) {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: "https://orkatool.com" },
-        { "@type": "ListItem", position: 2, name: "Tools", item: "https://orkatool.com/tools" },
-        { "@type": "ListItem", position: 3, name: tool.title, item: `https://orkatool.com/tools/${tool.slug}` },
+        { "@type": "ListItem", position: 2, name: "Calculator Tools", item: "https://orkatool.com/calculator-tools" },
+        { "@type": "ListItem", position: 3, name: tool.title, item: `https://orkatool.com/calculator-tools/${tool.slug}` },
       ],
     },
   };

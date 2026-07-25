@@ -160,7 +160,7 @@ export default function DetailedForm({ form, rates, setForm }: Props) {
       `- Net Wealth: ${formatMoney(result.netWealth, form.currency)}\n` +
       `- Zakat Amount Due: ${formatMoney(result.zakat, form.currency)}\n` +
       `Date Calculated: ${new Date().toLocaleDateString()}\n` +
-      `Calculate online: ${window.location.origin}/tools/zakat-calculator`;
+      `Calculate online: ${window.location.origin}/calculator-tools/zakat-calculator`;
     navigator.clipboard.writeText(text);
     alert("Full detailed summary report copied to clipboard!");
   };
@@ -171,7 +171,7 @@ export default function DetailedForm({ form, rates, setForm }: Props) {
       `Net Assets: ${formatMoney(result.totalAssets, form.currency)}\n` +
       `Obligated Wealth: ${formatMoney(result.netWealth, form.currency)}\n` +
       `Zakat contribution: ${formatMoney(result.zakat, form.currency)}\n` +
-      `Calculate yours: ${window.location.origin}/tools/zakat-calculator`;
+      `Calculate yours: ${window.location.origin}/calculator-tools/zakat-calculator`;
     window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, "_blank");
   };
 

@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Browse Free Online Tool Categories | OrkaTool",
   description:
-    "Explore our categorized collection of free online tools, including Calculators, Developer Tools, Image Tools, and Text Tools.",
+    "Explore our categorized collection of free online tools, including Calculators and Text Tools.",
   alternates: {
     canonical: "/categories",
   },

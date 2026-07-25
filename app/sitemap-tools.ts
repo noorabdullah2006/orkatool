@@ -36,25 +36,8 @@ export default async function getToolsSitemap(): Promise<MetadataRoute.Sitemap> 
   // 3. Dynamic Tools
   const tools = getAllTools().filter((tool) => tool.published);
   const toolRoutes = tools.map((tool) => {
-    let routePath = `/tools/${tool.slug}`;
-
-    // Look for category-specific custom folders under app/
-    const pathsToCheck = [
-      path.join("app", tool.category, tool.slug, "page.tsx"),
-      path.join("app", "islamic-tools", tool.slug, "page.tsx"),
-      path.join("app", "text-tools", tool.slug, "page.tsx"),
-    ];
-
-    for (const checkPath of pathsToCheck) {
-      const absolutePath = path.join(process.cwd(), checkPath);
-      if (fs.existsSync(absolutePath)) {
-        // Derive path from the matching folder structure
-        const relativeAppPath = checkPath.replace("app" + path.sep, "").replace(path.sep + "page.tsx", "");
-        const normalizedUrlPath = relativeAppPath.split(path.sep).join("/");
-        routePath = `/${normalizedUrlPath}`;
-        break;
-      }
-    }
+    const routePrefix = tool.category === "calculators" ? "calculator-tools" : tool.category;
+    const routePath = `/${routePrefix}/${tool.slug}`;
 
     return {
       url: `${baseUrl}${routePath}`,

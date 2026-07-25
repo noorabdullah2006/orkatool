@@ -16,7 +16,7 @@ export default function FooterBrand() {
       </div>
 
       <p className="footer-description">
-        Free online calculators, converters, developer tools,
+        Free online calculators, text tools,
         productivity tools and utilities designed to be fast,
         accurate and easy to use.
       </p>

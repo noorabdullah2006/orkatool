@@ -77,7 +77,7 @@ export default function QuickForm({ form, rates, setForm }: Props) {
     const text = `My OrkaTool Zakat calculation summary:\n` +
       `Total Net Wealth: ${formatMoney(result.netWealth, form.currency)}\n` +
       `Total Zakat Due (2.5%): ${formatMoney(result.zakat, form.currency)}\n` +
-      `Try it free: ${window.location.origin}/tools/zakat-calculator`;
+      `Try it free: ${window.location.origin}/calculator-tools/zakat-calculator`;
     window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, "_blank");
   };
 

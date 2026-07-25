@@ -60,7 +60,7 @@ const organizationSchema = {
       name: "OrkaTool",
       url: "https://orkatool.com",
       description:
-        "Free online calculators, converters, developer tools, productivity tools and utilities designed to be fast, accurate and easy to use.",
+        "Free online calculators, text tools, productivity tools and utilities designed to be fast, accurate and easy to use.",
       contactPoint: {
         "@type": "ContactPoint",
         contactType: "customer support",

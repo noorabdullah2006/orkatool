@@ -115,7 +115,7 @@ export default function ZakatCalculatorContent() {
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://orkatool.com/tools/zakat-calculator"
+      "@id": "https://orkatool.com/calculator-tools/zakat-calculator"
     }
   };
 
@@ -152,7 +152,7 @@ export default function ZakatCalculatorContent() {
         "@type": "ListItem",
         "position": 3,
         "name": "Zakat Calculator",
-        "item": "https://orkatool.com/tools/zakat-calculator"
+        "item": "https://orkatool.com/calculator-tools/zakat-calculator"
       }
     ]
   };
@@ -645,7 +645,7 @@ export default function ZakatCalculatorContent() {
             <h2 className="related-islamic-tools-title">Related Islamic Tools</h2>
             <div className="related-tools-grid">
               
-              <Link href="/tools/inheritance-calculator" className="related-tool-card">
+              <Link href="/calculator-tools/inheritance-calculator" className="related-tool-card">
                 <div className="related-tool-icon">⚖️</div>
                 <div className="related-tool-content">
                   <h4 className="related-tool-title-card">Islamic Inheritance Calculator</h4>

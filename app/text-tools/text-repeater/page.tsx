@@ -31,7 +31,7 @@ const RELATED_TEXT_TOOLS = [
     description: "Calculate your Zakat quickly and accurately.",
     icon: "🕌",
     slug: "zakat-calculator",
-    href: "/tools/zakat-calculator"
+    href: "/calculator-tools/zakat-calculator"
   },
   {
     id: "inheritance-calculator",
@@ -39,7 +39,7 @@ const RELATED_TEXT_TOOLS = [
     description: "Calculate Islamic Estate & Inheritance shares distribution according to Faraid Fiqh.",
     icon: "⚖️",
     slug: "inheritance-calculator",
-    href: "/islamic-tools/inheritance-calculator"
+    href: "/calculator-tools/inheritance-calculator"
   }
 ];
 

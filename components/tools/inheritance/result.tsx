@@ -27,7 +27,7 @@ export default function InheritanceResultView({ result, currency, onReset }: Pro
       text += `- ${s.name} (${s.relation}): ${s.fraction} | ${s.percentage}% | Only share: ${formatMoney(s.amount)}\n`;
     });
     text += `--------------------------------------------------\n`;
-    text += `Generated via OrkaTool: ${window.location.origin}/islamic-tools/inheritance-calculator`;
+    text += `Generated via OrkaTool: ${window.location.origin}/calculator-tools/inheritance-calculator`;
     
     navigator.clipboard.writeText(text);
     alert("Inheritance calculation summary copied to clipboard!");
@@ -39,7 +39,7 @@ export default function InheritanceResultView({ result, currency, onReset }: Pro
     activeShares.forEach((s) => {
       text += `* ${s.name}: ${s.fraction} (${s.percentage}%) = ${formatMoney(s.amount)}\n`;
     });
-    text += `Calculate yours: ${window.location.origin}/islamic-tools/inheritance-calculator`;
+    text += `Calculate yours: ${window.location.origin}/calculator-tools/inheritance-calculator`;
     
     window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, "_blank");
   };

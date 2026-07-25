@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description: "Calculate Islamic Estate & Inheritance shares distribution according to Faraid Fiqh.",
   keywords: ["inheritance", "calculator", "faraid", "islamic inheritance", "estate distribution", "wasiyyah"],
   alternates: {
-    canonical: "/islamic-tools/inheritance-calculator",
+    canonical: "/calculator-tools/inheritance-calculator",
   },
 };
 

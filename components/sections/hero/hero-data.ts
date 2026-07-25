@@ -43,29 +43,9 @@ export const heroContent: HeroContent = {
       subtitle: "Fast & Accurate",
     },
     {
-      icon: "🌐",
-      title: "SEO Tools",
-      subtitle: "Website Optimization",
-    },
-    {
-      icon: "🤖",
-      title: "AI Tools",
-      subtitle: "Smart Utilities",
-    },
-    {
-      icon: "🖼️",
-      title: "Image Tools",
-      subtitle: "Compress & Convert",
-    },
-    {
       icon: "📄",
-      title: "PDF Tools",
-      subtitle: "Convert & Merge",
-    },
-    {
-      icon: "💻",
-      title: "Developer Tools",
-      subtitle: "Format & Validator",
+      title: "Text Tools",
+      subtitle: "Format & Transform",
     },
   ],
 };

@@ -22,45 +22,6 @@ export const categories: Category[] = [
     },
   },
 
-  {
-    id: "developer-tools",
-    slug: "developer-tools",
-    title: "Developer Tools",
-    description: "Essential utilities for developers.",
-    icon: "developer",
-    totalTools: 0,
-
-    seo: {
-      title: "Developer Utilities - OrkaTool",
-      description:
-        "Essential development and formatter utilities including JSON formatter and password generators.",
-      keywords: [
-        "developer tools",
-        "dev tools",
-        "utilities",
-      ],
-    },
-  },
-
-  {
-    id: "image-tools",
-    slug: "image-tools",
-    title: "Image Tools",
-    description: "Resize, compress and optimize images.",
-    icon: "image",
-    totalTools: 0,
-
-    seo: {
-      title: "Image Editing Tools - OrkaTool",
-      description:
-        "Optimize, resize, and convert image files online instantly.",
-      keywords: [
-        "image tools",
-        "compress image",
-        "resize image",
-      ],
-    },
-  },
 
   {
     id: "text-tools",

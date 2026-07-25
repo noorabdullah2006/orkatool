@@ -115,7 +115,7 @@ export default function InheritanceCalculatorContent() {
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://orkatool.com/islamic-tools/inheritance-calculator"
+      "@id": "https://orkatool.com/calculator-tools/inheritance-calculator"
     }
   };
 
