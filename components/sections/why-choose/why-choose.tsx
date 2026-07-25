@@ -5,7 +5,7 @@ export default function WhyChoose() {
 
   return (
 
-    <section className="section why-choose">
+    <section className="section why-choose" role="region" aria-label="Why Choose OrkaTool">
 
       <div className="container">
 

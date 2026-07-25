@@ -1,5 +1,5 @@
 export interface PopularTool {
-  id: number;
+  id: string;
 
   title: string;
 
@@ -11,7 +11,7 @@ export interface PopularTool {
 
   href: string;
 
-  badge?: "Popular" | "New";
+  badge?: "Popular" | "New" | "Trending" | "Editor's Pick";
 }
 
 export interface ToolFilter {

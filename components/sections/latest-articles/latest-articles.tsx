@@ -13,7 +13,7 @@ export default function LatestArticles() {
 
   return (
 
-    <section className="latest-articles">
+    <section className="latest-articles" role="region" aria-label="Latest Articles from Our Blog">
 
       <Container>
 

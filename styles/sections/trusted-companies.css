@@ -1,0 +1,113 @@
+/* ==========================================================
+   Trusted Companies Logo Strip
+   ========================================================== */
+
+.trusted-companies {
+  background: var(--color-background);
+  padding: var(--space-8) 0;
+  position: relative;
+  overflow: hidden;
+  
+  /* Gradient top/bottom soft separators */
+  border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+}
+
+.trusted-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.trusted-title {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-secondary);
+  opacity: 0.85;
+  text-align: center;
+}
+
+/* Scroller Container with Blur Overlay Effect */
+.trusted-scroller {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  
+  /* Mask gradient for smooth fade off at edges */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 20%,
+    #000 80%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 20%,
+    #000 80%,
+    transparent
+  );
+}
+
+/* Scroll Animation Track */
+.trusted-track {
+  display: flex;
+  width: max-content;
+  gap: clamp(2.5rem, 6vw, 4.5rem);
+  align-items: center;
+  animation: logo-scroll 35s linear infinite;
+}
+
+.trusted-logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-text-secondary);
+  opacity: 0.65;
+  transition: opacity var(--transition-normal), color var(--transition-normal);
+  cursor: default;
+}
+
+.trusted-logo-wrapper svg {
+  transition: transform var(--transition-normal);
+}
+
+.trusted-logo-wrapper:hover {
+  opacity: 1;
+  color: var(--color-primary);
+}
+
+.trusted-logo-wrapper:hover svg {
+  transform: scale(1.08);
+}
+
+.trusted-logo-name {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.01em;
+}
+
+/* Keyframes */
+@keyframes logo-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Halfway across the duplicated logo list */
+    transform: translateX(-50%);
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .trusted-track {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

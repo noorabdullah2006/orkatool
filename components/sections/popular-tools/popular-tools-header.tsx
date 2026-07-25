@@ -1,5 +1,5 @@
 interface PopularToolsHeaderProps {
-  badge: string;
+  badge?: string;
 
   title: string;
 
@@ -14,9 +14,11 @@ export default function PopularToolsHeader({
   return (
     <div className="popular-tools-header">
 
-      <span className="popular-tools-badge">
-        {badge}
-      </span>
+      {badge && (
+        <span className="popular-tools-badge">
+          {badge}
+        </span>
+      )}
 
       <h2 className="popular-tools-title">
         {title}

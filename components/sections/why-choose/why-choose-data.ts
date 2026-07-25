@@ -13,48 +13,48 @@ export const whyChooseItems: WhyChooseItem[] = [
   {
     id: "fast",
     title: "Lightning Fast",
-    description:
-      "Instant results without waiting.",
+    description: "Average response under 1 second.",
     icon: Zap,
+    metric: "< 1s",
   },
 
   {
     id: "secure",
     title: "100% Secure",
-    description:
-      "Your files never leave your device.",
+    description: "Your files never leave your device.",
     icon: ShieldCheck,
+    metric: "Client Side",
   },
 
   {
     id: "free",
     title: "Always Free",
-    description:
-      "Use every tool without paying.",
+    description: "Most tools available without signup.",
     icon: BadgeCheck,
+    metric: "0$ Fees",
   },
 
   {
     id: "responsive",
     title: "Responsive",
-    description:
-      "Perfect experience on every device.",
+    description: "Perfect experience on every device.",
     icon: Smartphone,
+    metric: "Universal",
   },
 
   {
     id: "available",
     title: "24/7 Available",
-    description:
-      "Access tools anytime you need.",
+    description: "Access tools anytime you need.",
     icon: Clock3,
+    metric: "99.9% Up",
   },
 
   {
     id: "global",
     title: "Global Access",
-    description:
-      "Use OrkaTool from anywhere.",
+    description: "Use OrkaTool from anywhere.",
     icon: Globe,
+    metric: "Anywhere",
   },
 ];

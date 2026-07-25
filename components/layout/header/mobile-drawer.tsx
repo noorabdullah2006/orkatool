@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import Logo from "./logo";
 import Navigation from "./navigation";
 import SearchButton from "./search-button";
@@ -8,11 +7,13 @@ import ThemeToggle from "./theme-toggle";
 interface MobileDrawerProps {
   isOpen: boolean;
   onClose: () => void;
+  onSearchClick?: () => void;
 }
 
 export default function MobileDrawer({
   isOpen,
   onClose,
+  onSearchClick,
 }: MobileDrawerProps) {
   return (
     <aside
@@ -20,14 +21,11 @@ export default function MobileDrawer({
       role="dialog"
       aria-modal="true"
       aria-hidden={!isOpen}
-      className={`mobile-drawer ${
-        isOpen ? "mobile-drawer-open" : ""
-      }`}
+      className={`mobile-drawer ${isOpen ? "mobile-drawer-open" : ""}`}
     >
       {/* ======================================================
           Header
       ====================================================== */}
-
       <div className="mobile-drawer-header">
         <Logo />
 
@@ -44,7 +42,6 @@ export default function MobileDrawer({
       {/* ======================================================
           Navigation
       ====================================================== */}
-
       <div
         className="mobile-drawer-navigation"
         onClick={onClose}
@@ -55,15 +52,18 @@ export default function MobileDrawer({
       {/* ======================================================
           Divider
       ====================================================== */}
-
       <div className="mobile-drawer-divider" />
 
       {/* ======================================================
           Actions
       ====================================================== */}
-
       <div className="mobile-drawer-actions">
-        <SearchButton />
+        <SearchButton
+          onClick={() => {
+            onClose();
+            if (onSearchClick) onSearchClick();
+          }}
+        />
 
         <ThemeToggle />
       </div>
@@ -71,7 +71,6 @@ export default function MobileDrawer({
       {/* ======================================================
           Footer
       ====================================================== */}
-
       <div className="mobile-drawer-footer">
         <Link
           href="/about"

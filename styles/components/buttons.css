@@ -235,3 +235,26 @@
 
   outline-offset: 3px;
 }
+
+/* ==========================================================
+   ALIASES (non-BEM usage in components)
+========================================================== */
+
+.button-primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.button-primary:hover {
+  background: var(--color-primary-hover);
+}
+
+.button-secondary {
+  background: var(--color-surface-secondary);
+  color: var(--color-text-primary);
+  border-color: var(--color-border);
+}
+
+.button-secondary:hover {
+  background: var(--color-background-secondary);
+}

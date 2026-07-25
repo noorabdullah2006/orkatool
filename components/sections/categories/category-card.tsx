@@ -20,8 +20,8 @@ export default function CategoryCard({
     >
       <div className="category-card-icon">
         <Icon
-          size={34}
-          strokeWidth={2.2}
+          size={40}
+          strokeWidth={2}
         />
       </div>
 
@@ -34,7 +34,11 @@ export default function CategoryCard({
       </p>
 
       <span className="category-card-count">
-        {category.totalTools} Tools
+        {category.totalTools}+ Tools
+      </span>
+
+      <span className="category-card-cta">
+        Explore <span className="cta-arrow">→</span>
       </span>
     </Link>
   );

@@ -1,13 +1,20 @@
 import CategoryCard from "./category-card";
-import { categories } from "./categories-data";
+import { getAllCategories } from "@/content/categories";
+import type { CategoryIconName } from "./categories.types";
 
 export default function CategoriesGrid() {
+  const allCategories = getAllCategories();
+
   return (
     <div className="categories-grid">
-      {categories.map((category) => (
+      {allCategories.map((category) => (
         <CategoryCard
           key={category.id}
-          category={category}
+          category={{
+            ...category,
+            icon: category.icon as CategoryIconName,
+            href: `/categories/${category.slug}`,
+          }}
         />
       ))}
     </div>

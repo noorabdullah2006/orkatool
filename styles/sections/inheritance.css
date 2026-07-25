@@ -1,0 +1,21 @@
+/* ==========================================================
+   Inheritance Tool Custom Styling
+   ========================================================== */
+
+.inheritance-heirs-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.inheritance-numeric-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.inheritance-bar-segment {
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}

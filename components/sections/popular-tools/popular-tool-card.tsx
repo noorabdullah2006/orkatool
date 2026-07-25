@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { getCategoryBySlug } from "@/content/categories";
 import type { PopularTool } from "./popular-tools.types";
 
 interface PopularToolCardProps {
@@ -7,8 +9,11 @@ interface PopularToolCardProps {
 export default function PopularToolCard({
   tool,
 }: PopularToolCardProps) {
+  const categoryData = getCategoryBySlug(tool.category);
+  const categoryName = categoryData ? categoryData.title : tool.category;
+
   return (
-    <a
+    <Link
       href={tool.href}
       className="popular-tool-card"
     >
@@ -18,17 +23,29 @@ export default function PopularToolCard({
           {tool.icon}
         </div>
 
-        {tool.badge && (
-          <span
-            className={`popular-tool-badge ${
-              tool.badge === "Popular"
-                ? "popular-tool-badge-popular"
-                : "popular-tool-badge-new"
-            }`}
-          >
-            {tool.badge}
-          </span>
-        )}
+        <div className="popular-tool-card-badges">
+          {categoryName && (
+            <span className="popular-tool-category-badge">
+              {categoryName}
+            </span>
+          )}
+
+          {tool.badge && (
+            <span
+              className={`popular-tool-badge ${
+                tool.badge === "Popular"
+                  ? "popular-tool-badge-popular"
+                  : tool.badge === "Trending"
+                  ? "popular-tool-badge-trending"
+                  : tool.badge === "New"
+                  ? "popular-tool-badge-new"
+                  : "popular-tool-badge-editor"
+              }`}
+            >
+              {tool.badge}
+            </span>
+          )}
+        </div>
 
       </div>
 
@@ -44,6 +61,6 @@ export default function PopularToolCard({
         Open Tool
       </span>
 
-    </a>
+    </Link>
   );
 }

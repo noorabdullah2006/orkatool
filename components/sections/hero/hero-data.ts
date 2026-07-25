@@ -1,12 +1,12 @@
 import type { HeroContent } from "./hero.types";
 
 export const heroContent: HeroContent = {
-  badge: "🚀 Trusted by Thousands",
+  badge: "Trusted by Thousands",
 
-  title: "Fast, Accurate & Free Online Tools",
+  title: "Fast, Free & Secure Online Tools",
 
   description:
-    "Everything you need in one place — Calculators, Converters, SEO Tools, PDF Tools, Developer Utilities, AI Tools and much more.",
+    "Free tools, converters, and smart online utilities in one place. Secure processing and instant performance, zero account limits.",
 
   buttons: [
     {
@@ -43,11 +43,6 @@ export const heroContent: HeroContent = {
       subtitle: "Fast & Accurate",
     },
     {
-      icon: "📄",
-      title: "PDF Tools",
-      subtitle: "Convert & Merge",
-    },
-    {
       icon: "🌐",
       title: "SEO Tools",
       subtitle: "Website Optimization",
@@ -56,6 +51,21 @@ export const heroContent: HeroContent = {
       icon: "🤖",
       title: "AI Tools",
       subtitle: "Smart Utilities",
+    },
+    {
+      icon: "🖼️",
+      title: "Image Tools",
+      subtitle: "Compress & Convert",
+    },
+    {
+      icon: "📄",
+      title: "PDF Tools",
+      subtitle: "Convert & Merge",
+    },
+    {
+      icon: "💻",
+      title: "Developer Tools",
+      subtitle: "Format & Validator",
     },
   ],
 };

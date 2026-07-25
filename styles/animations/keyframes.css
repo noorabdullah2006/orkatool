@@ -121,3 +121,39 @@
     opacity: .55;
   }
 }
+
+/* Gentle Bounce — icons on card hover */
+
+@keyframes gentle-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-4px);
+  }
+  60% {
+    transform: translateY(-2px);
+  }
+}
+
+/* Shimmer — gradient sweep for accent lines */
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Badge pulse — subtle glow for badges */
+
+@keyframes badge-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(37, 99, 235, 0);
+  }
+}

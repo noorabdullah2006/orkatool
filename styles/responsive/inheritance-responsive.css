@@ -1,0 +1,365 @@
+/* ==========================================================
+   Inheritance Calculator — Full Mobile Responsive Overrides
+   Only affects ≤767px. Desktop & tablet are pixel-identical.
+   ========================================================== */
+
+/* -------------------------------------------------------
+   GLOBAL OVERFLOW PREVENTION  (all breakpoints as safety)
+   ------------------------------------------------------- */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* -------------------------------------------------------
+   MOBILE  (≤767px)
+   ------------------------------------------------------- */
+@media (max-width: 767px) {
+
+  /* 1. Stop the page wrapper adding extra horizontal padding */
+  .tool-page {
+    overflow-x: hidden;
+  }
+
+  /* 2. Calculator wrapper — remove large desktop padding */
+  .calculator-wrapper {
+    padding: 20px 12px !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 3. MOST IMPORTANT: collapse the 2-column grid into 1 column */
+  .calculator-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 4. Main form column — full width, no overflow */
+  .calculator-main {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    gap: 20px !important;
+    overflow: hidden !important;
+  }
+
+  /* 5. Sidebar — unstick, full width, comes AFTER form */
+  .calculator-sidebar,
+  .zakat-result-sticky {
+    position: static !important;
+    top: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 6. Sidebar cards — shrink large padding */
+  .calculator-card {
+    padding: 16px !important;
+    border-radius: 16px !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  /* Large net-estate value — scale down on mobile */
+  .calculator-card [style*="font-size: 2.4rem"],
+  .calculator-card [style*="font-size:2.4rem"] {
+    font-size: 1.6rem !important;
+    word-break: break-all !important;
+  }
+
+  /* 7. Tool hero section */
+  .tool-hero {
+    padding: 20px 16px !important;
+  }
+
+  .tool-hero-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 10px !important;
+    max-width: 100% !important;
+  }
+
+  .tool-title,
+  h1.tool-title {
+    font-size: 1.6rem !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    word-break: break-word !important;
+    margin-top: 6px !important;
+  }
+
+  .tool-description {
+    font-size: 0.9rem !important;
+    text-align: center !important;
+    line-height: 1.5 !important;
+    max-width: 100% !important;
+    word-break: break-word !important;
+  }
+
+  /* 8. Wizard progress bar — horizontal scroll on mobile */
+  .wizard-progress-bar {
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    overflow-y: visible !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding-bottom: 8px !important;
+    gap: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    position: relative !important;
+    scrollbar-width: thin !important;
+    scrollbar-color: #d1d5db transparent !important;
+  }
+
+  .wizard-progress-bar::-webkit-scrollbar {
+    height: 3px;
+  }
+
+  .wizard-progress-bar::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 4px;
+  }
+
+  /* Progress line — hide on mobile to prevent overflow */
+  .wizard-progress-line,
+  .wizard-progress-line-active {
+    display: none !important;
+  }
+
+  /* Step nodes — fixed width, don't shrink */
+  .wizard-step-node {
+    flex: 0 0 auto !important;
+    min-width: 60px !important;
+    padding: 0 8px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 4px !important;
+  }
+
+  .wizard-step-circle {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 0.85rem !important;
+  }
+
+  .wizard-step-label {
+    font-size: 0.7rem !important;
+    white-space: nowrap !important;
+  }
+
+  /* 9. Step sections — constrain to viewport */
+  .calculator-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  /* Step 3 category boxes — smaller padding */
+  .calculator-section > div[style*="padding: 18px"],
+  .calculator-section > div[style*="padding:18px"] {
+    padding: 12px !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+  }
+
+  /* NumericField row — wrap label if needed, keep +/- buttons accessible */
+  .zakat-field-wrapper.form-group[style*="display: flex"] {
+    flex-wrap: nowrap !important;
+    gap: 8px !important;
+    padding: 8px 0 !important;
+  }
+
+  /* 10. Selector grid (Step 1 dropdowns) -> single column */
+  .selector-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+    width: 100% !important;
+  }
+
+  /* 11. Form inputs, selects — full width, touch-friendly */
+  .form-input,
+  .form-select {
+    width: 100% !important;
+    height: 48px !important;
+    font-size: 0.95rem !important;
+    box-sizing: border-box !important;
+    max-width: 100% !important;
+  }
+
+  /* 12. Wizard action buttons — stack vertically */
+  .wizard-actions {
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+
+  .wizard-actions .btn {
+    width: 100% !important;
+    justify-content: center !important;
+    min-height: 48px !important;
+  }
+
+  /* 13. Result view — all divs constrained */
+  .calculator-main > div > div[style] {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Result button group — stack vertically */
+  .button-group,
+  div.button-group {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+
+  .button-group .btn,
+  div.button-group .btn {
+    width: 100% !important;
+    min-height: 48px !important;
+    justify-content: center !important;
+  }
+
+  /* 14. Detailed shares table — horizontal scroll container */
+  div[style*="overflow-x: auto"],
+  div[style*="overflowX: auto"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  /* The table itself gets a min-width to trigger scroll */
+  table.zakat-glossary-table {
+    min-width: 520px !important;
+  }
+
+  /* 15. Eligibility / warning banners — no overflow */
+  .eligibility,
+  .eligibility.eligible,
+  .eligibility.warning {
+    padding: 14px !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    word-break: break-word !important;
+  }
+
+  /* 16. Scope card and result text — prevent horizontal bleed */
+  .calculator-card p,
+  .calculator-card span,
+  .calculator-card h2,
+  .calculator-card h3,
+  .calculator-card h4 {
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    max-width: 100% !important;
+  }
+
+  /* 17. The Calculator component wrapper inside tool-body */
+  .tool-body,
+  .tool-container,
+  .tool-main {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding-inline: 0 !important;
+    overflow-x: hidden !important;
+  }
+}
+
+/* -------------------------------------------------------
+   Small mobile (≤390px) — extra squeeze
+   ------------------------------------------------------- */
+@media (max-width: 390px) {
+  .calculator-wrapper {
+    padding: 16px 10px !important;
+  }
+
+  .tool-title,
+  h1.tool-title {
+    font-size: 1.4rem !important;
+  }
+
+  .calculator-card {
+    padding: 12px !important;
+  }
+
+  .wizard-step-node {
+    min-width: 52px !important;
+    padding: 0 4px !important;
+  }
+
+  .wizard-step-circle {
+    width: 32px !important;
+    height: 32px !important;
+  }
+}
+
+/* -------------------------------------------------------
+   OUTER CALCULATOR WRAPPER — reduce padding on mobile
+   The Calculator component renders: section.calculator > div.calculator-card > div.calculator-body
+   .calculator-card has 32px padding by default which causes full-bleed overflow
+   ------------------------------------------------------- */
+@media (max-width: 767px) {
+  /* Remove large outer padding from section.calculator */
+  section.calculator {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  /* The outer card that wraps the whole calculator content */
+  section.calculator > .calculator-card {
+    padding: 14px 12px !important;
+    border-radius: 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  /* Calculator body (direct children container) */
+  .calculator-body {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  /* Calculator title sizing */
+  .calculator-title {
+    font-size: 1.3rem !important;
+    line-height: 1.3 !important;
+    word-break: break-word !important;
+  }
+
+  .calculator-description {
+    font-size: 0.875rem !important;
+    line-height: 1.5 !important;
+    word-break: break-word !important;
+  }
+
+  /* Stop the enormous sidebar net-estate value from pushing width */
+  .zakat-result-sticky .calculator-card [style*="2.4rem"],
+  .zakat-result-sticky span[style] {
+    font-size: clamp(1.2rem, 5vw, 2.4rem) !important;
+    word-break: break-all !important;
+  }
+}
+

@@ -1,0 +1,83 @@
+/* =========================================================
+   Search
+========================================================= */
+
+.category-search{
+
+margin:48px 0;
+
+}
+
+.category-search-container{
+
+max-width:700px;
+
+margin:0 auto;
+
+}
+
+.category-search-input{
+
+width:100%;
+
+height:60px;
+
+padding:0 24px;
+
+border:1px solid #d1d5db;
+
+border-radius:18px;
+
+font-size:1rem;
+
+outline:none;
+
+background:#ffffff;
+
+transition:.3s;
+
+}
+
+.category-search-input:focus{
+
+border-color:#2563eb;
+
+box-shadow:0 0 0 4px rgba(37,99,235,.12);
+
+}
+
+.dark .category-search-input{
+
+background:#111827;
+
+border-color:#374151;
+
+color:#ffffff;
+
+}
+
+.dark .category-search-input::placeholder{
+
+color:#9ca3af;
+
+}
+
+@media(max-width:768px){
+
+.category-search{
+
+margin:32px 0;
+
+}
+
+.category-search-input{
+
+height:54px;
+
+font-size:.95rem;
+
+padding:0 18px;
+
+}
+
+}

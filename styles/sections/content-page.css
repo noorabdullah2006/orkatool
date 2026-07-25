@@ -1,0 +1,504 @@
+/* ==========================================================
+   CONTENT PAGES (About, Contact, Privacy, Terms)
+   Shared styles for legal/informational pages
+========================================================== */
+
+/* ── Page Wrapper ────────────────────────────────────────── */
+
+.content-page {
+  padding: var(--section-padding-desktop) 0;
+  min-height: 80vh;
+}
+
+/* ── Header ──────────────────────────────────────────────── */
+
+.content-page-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.content-page-badge {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.content-page-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  color: var(--color-text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.content-page-subtitle {
+  font-size: 1.2rem;
+  color: var(--color-text-secondary);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.content-page-subtitle--narrow {
+  max-width: 600px;
+}
+
+/* ── Body (prose-width content) ──────────────────────────── */
+
+.content-page-body {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ── Section List (legal pages) ──────────────────────────── */
+
+.content-page-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+.content-page-section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 1rem;
+}
+
+.content-page-last-updated {
+  color: var(--color-text-secondary);
+  margin-bottom: 3rem;
+}
+
+/* ── Disclaimer Callout ──────────────────────────────────── */
+
+.content-page-disclaimer {
+  background: var(--color-surface);
+  padding: 1.25rem;
+  border-left: 3px solid var(--color-warning);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+/* ── Card Grid ───────────────────────────────────────────── */
+
+.content-page-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.content-page-grid--narrow {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* ── Mission/Vision Cards ────────────────────────────────── */
+
+.content-page-card {
+  padding: 2.5rem;
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+  transition: var(--card-transition);
+}
+
+.content-page-card:hover {
+  border-color: var(--color-border-dark);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.content-page-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.content-page-card-text {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── Value Pillars ───────────────────────────────────────── */
+
+.content-page-value {
+  padding: 1.5rem 0;
+}
+
+.content-page-value-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.content-page-value-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.content-page-value-text {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── Statistics Banner ───────────────────────────────────── */
+
+.content-page-stats {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  border-radius: var(--radius-xl);
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2.5rem;
+  text-align: center;
+  border: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+.content-page-stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin: 0 0 0.5rem;
+}
+
+.content-page-stat-number--sm {
+  font-size: 1.8rem;
+  padding-top: 0.5rem;
+}
+
+.content-page-stat-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ── Roadmap ─────────────────────────────────────────────── */
+
+.content-page-roadmap {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.content-page-roadmap-item {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.content-page-roadmap-item:last-child {
+  margin-bottom: 0;
+}
+
+.content-page-roadmap-number {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.content-page-roadmap-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+}
+
+.content-page-roadmap-text {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* ── CTA Section ─────────────────────────────────────────── */
+
+.content-page-cta {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--card-shadow);
+}
+
+.content-page-cta-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.content-page-cta-text {
+  color: var(--color-text-secondary);
+  margin: 0 auto 2rem;
+  max-width: 600px;
+}
+
+.content-page-cta-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ── Section Spacing ─────────────────────────────────────── */
+
+.content-page-section {
+  margin-bottom: 5rem;
+}
+
+.content-page-section-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+}
+
+/* ── Contact Info Card ───────────────────────────────────── */
+
+.content-page-info-card {
+  padding: 2.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  background: var(--color-surface);
+}
+
+.content-page-info-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.content-page-info-item:last-child {
+  margin-bottom: 0;
+}
+
+.content-page-info-icon {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.content-page-info-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+}
+
+.content-page-info-text {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* ── Map Placeholder ─────────────────────────────────────── */
+
+.content-page-map-placeholder {
+  flex: 1;
+  min-height: 220px;
+  border-radius: var(--radius-xl);
+  background: var(--color-background-secondary);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--color-text-secondary);
+  padding: 2rem;
+  text-align: center;
+}
+
+/* ── Contact Form Layout ─────────────────────────────────── */
+
+.content-page-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.content-page-form-card {
+  padding: 2.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  background: var(--color-surface);
+  box-shadow: var(--card-shadow);
+}
+
+.content-page-form-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+/* ── Contact FAQ ─────────────────────────────────────────── */
+
+.content-page-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+}
+
+.content-page-faq-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.content-page-faq-text {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── Success State ───────────────────────────────────────── */
+
+.content-page-success {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.content-page-success-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+}
+
+.content-page-success-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.content-page-success-text {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* ── 404 Page ────────────────────────────────────────────── */
+
+.not-found-page {
+  text-align: center;
+  padding: var(--section-padding-desktop) 0;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.not-found-code {
+  font-size: clamp(5rem, 15vw, 10rem);
+  font-weight: 900;
+  color: var(--color-primary);
+  line-height: 1;
+  margin-bottom: 1rem;
+  opacity: 0.15;
+}
+
+.not-found-title {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: var(--color-text-primary);
+  margin-bottom: 1rem;
+}
+
+.not-found-text {
+  color: var(--color-text-secondary);
+  font-size: 1.1rem;
+  max-width: 480px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+}
+
+.not-found-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .content-page {
+    padding: var(--section-padding-tablet) 0;
+  }
+
+  .content-page-header {
+    margin-bottom: 3rem;
+  }
+
+  .content-page-section {
+    margin-bottom: 3.5rem;
+  }
+
+  .content-page-section-heading {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .content-page-card {
+    padding: 2rem;
+  }
+
+  .content-page-stats {
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .content-page-cta {
+    padding: 3rem 1.5rem;
+  }
+
+  .content-page-cta-title {
+    font-size: 1.5rem;
+  }
+
+  .content-page-form-card {
+    padding: 2rem;
+  }
+
+  .content-page-info-card {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-page {
+    padding: var(--section-padding-mobile) 0;
+  }
+
+  .content-page-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .content-page-stats {
+    grid-template-columns: 1fr 1fr;
+    padding: 1.5rem;
+  }
+
+  .content-page-cta-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content-page-form-grid {
+    grid-template-columns: 1fr;
+  }
+}

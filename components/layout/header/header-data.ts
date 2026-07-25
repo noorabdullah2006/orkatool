@@ -17,6 +17,11 @@ export const navigationItems: NavigationItem[] = [
   },
 
   {
+    label: "Blog",
+    href: "/blog",
+  },
+
+  {
     label: "About",
     href: "/about",
   },

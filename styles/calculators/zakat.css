@@ -1,0 +1,1055 @@
+/* ==========================================================
+   Zakat Layout
+========================================================== */
+
+.zakat-form{
+
+display:flex;
+
+flex-direction:column;
+
+gap:32px;
+
+}
+
+.zakat-section{
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.zakat-section-title{
+
+margin:0;
+
+font-size:1.3rem;
+
+font-weight:800;
+
+color:var(--heading-color);
+
+}
+
+.zakat-section-description{
+
+margin:0;
+
+font-size:.95rem;
+
+line-height:1.7;
+
+color:var(--text-light);
+
+}
+
+/* ==========================================================
+   Currency & Madhab
+========================================================== */
+
+.selector-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,minmax(0,1fr));
+
+gap:24px;
+
+}
+
+/* ==========================================================
+   Nisab Cards
+========================================================== */
+
+.nisab-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,minmax(0,1fr));
+
+gap:20px;
+
+}
+
+.nisab-card{
+
+padding:24px;
+
+border:2px solid #e5e7eb;
+
+border-radius:18px;
+
+cursor:pointer;
+
+transition:.3s;
+
+background:#ffffff;
+
+}
+
+.nisab-card:hover{
+
+border-color:#2563eb;
+
+transform:translateY(-3px);
+
+}
+
+.nisab-card.active{
+
+border-color:#2563eb;
+
+background:#eff6ff;
+
+}
+
+.dark .nisab-card{
+
+background:#111827;
+
+border-color:#374151;
+
+}
+
+.dark .nisab-card.active{
+
+background:#172554;
+
+border-color:#2563eb;
+
+}
+
+.nisab-title{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:10px;
+
+font-weight:700;
+
+}
+
+.nisab-badge{
+
+padding:4px 10px;
+
+border-radius:999px;
+
+background:#10b981;
+
+color:#ffffff;
+
+font-size:.75rem;
+
+font-weight:700;
+
+}
+
+.nisab-value{
+
+font-size:1.4rem;
+
+font-weight:800;
+
+color:#2563eb;
+
+}
+
+/* ==========================================================
+   Wealth Breakdown
+========================================================== */
+
+.wealth-breakdown{
+
+display:flex;
+
+flex-direction:column;
+
+gap:14px;
+
+}
+
+.breakdown-row{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:14px 0;
+
+border-bottom:1px solid #e5e7eb;
+
+}
+
+.breakdown-row:last-child{
+
+border-bottom:none;
+
+}
+
+.breakdown-label{
+
+font-weight:600;
+
+color:#6b7280;
+
+}
+
+.breakdown-value{
+
+font-weight:700;
+
+color:#111827;
+
+}
+
+.dark .breakdown-label{
+
+color:#cbd5e1;
+
+}
+
+.dark .breakdown-value{
+
+color:#ffffff;
+
+}
+
+/* ==========================================================
+   Zakat Result
+========================================================== */
+
+.zakat-result{
+
+display:flex;
+
+flex-direction:column;
+
+gap:24px;
+
+}
+
+.zakat-final{
+
+padding:32px;
+
+text-align:center;
+
+border-radius:22px;
+
+background:linear-gradient(
+135deg,
+#0f766e,
+#14b8a6
+);
+
+color:#ffffff;
+
+}
+
+.zakat-final-label{
+
+display:block;
+
+font-size:1rem;
+
+font-weight:600;
+
+opacity:.9;
+
+}
+
+.zakat-final-amount{
+
+display:block;
+
+margin-top:12px;
+
+font-size:3rem;
+
+font-weight:800;
+
+line-height:1.1;
+
+}
+
+/* ==========================================================
+   Eligibility
+========================================================== */
+
+.eligibility{
+
+padding:24px;
+
+border-radius:18px;
+
+text-align:center;
+
+}
+
+.eligible{
+
+background:#ecfdf5;
+
+border:1px solid #6ee7b7;
+
+}
+
+.not-eligible{
+
+background:#fffbeb;
+
+border:1px solid #fcd34d;
+
+}
+
+.dark .eligible{
+
+background:#052e2b;
+
+}
+
+.dark .not-eligible{
+
+background:#3b2f00;
+
+}
+
+/* ==========================================================
+   Wizard
+========================================================== */
+
+.wizard{
+
+display:flex;
+
+flex-direction:column;
+
+gap:32px;
+
+}
+
+.wizard-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+.wizard-step{
+
+font-size:.95rem;
+
+font-weight:700;
+
+color:#2563eb;
+
+}
+
+.wizard-actions{
+
+display:flex;
+
+justify-content:space-between;
+
+gap:20px;
+
+}
+
+/* ==========================================================
+   Share Buttons
+========================================================== */
+
+.share-actions{
+
+display:flex;
+
+gap:16px;
+
+flex-wrap:wrap;
+
+}
+
+/* ==========================================================
+   Responsive
+========================================================== */
+
+@media(max-width:768px){
+
+.selector-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.nisab-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.zakat-final-amount{
+
+font-size:2.3rem;
+
+}
+
+.wizard-actions{
+
+flex-direction:column;
+
+}
+
+.share-actions{
+
+flex-direction:column;
+
+}
+
+}
+
+/* ==========================================
+   Mode Switch
+========================================== */
+
+.mode-switch{
+
+display:flex;
+
+gap:14px;
+
+margin:32px 0;
+
+}
+
+.mode-btn{
+
+flex:1;
+
+padding:14px 20px;
+
+border:none;
+
+border-radius:12px;
+
+background:#edf2f7;
+
+font-size:15px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.25s;
+
+}
+
+.mode-btn:hover{
+
+background:#d9f99d;
+
+}
+
+.mode-btn.active{
+
+background:#16a34a;
+
+color:#fff;
+
+}
+
+
+
+/* ======================================================
+   Nisab Section
+====================================================== */
+
+.nisab-section{
+
+margin:40px 0;
+
+}
+
+.section-heading{
+
+margin-bottom:24px;
+
+}
+
+.section-heading h2{
+
+margin:0 0 8px;
+
+font-size:1.4rem;
+
+font-weight:700;
+
+color:#1f2937;
+
+}
+
+.section-heading p{
+
+margin:0;
+
+color:#6b7280;
+
+line-height:1.7;
+
+}
+
+.nisab-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:24px;
+
+}
+
+.nisab-card{
+
+padding:28px;
+
+background:#fff;
+
+border:2px solid #e5e7eb;
+
+border-radius:18px;
+
+cursor:pointer;
+
+transition:.25s;
+
+text-align:left;
+
+}
+
+.nisab-card:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 14px 30px rgba(0,0,0,.08);
+
+}
+
+.nisab-card.active{
+
+border-color:#16a34a;
+
+background:#f0fdf4;
+
+}
+
+.nisab-card-top{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:20px;
+
+}
+
+.nisab-card h3{
+
+margin:0;
+
+font-size:1.1rem;
+
+font-weight:700;
+
+}
+
+.recommended-badge{
+
+padding:5px 10px;
+
+background:#16a34a;
+
+color:#fff;
+
+font-size:.75rem;
+
+border-radius:999px;
+
+font-weight:600;
+
+}
+
+.nisab-grams{
+
+font-size:1.7rem;
+
+font-weight:700;
+
+margin-bottom:10px;
+
+color:#111827;
+
+}
+
+.nisab-price{
+
+font-size:1.15rem;
+
+font-weight:600;
+
+color:#0f766e;
+
+}
+
+.selected-tag{
+
+margin-top:20px;
+
+font-weight:600;
+
+color:#16a34a;
+
+}
+
+@media(max-width:768px){
+
+.nisab-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+/* ==========================================
+   Calculator Section Card Styling Updates
+========================================== */
+.calculator-section {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.calculator-section:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.dark .calculator-section {
+  background: #1f2937;
+  border-color: #374151;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* ==========================================
+   Readonly Box Styling
+========================================== */
+.readonly-box {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 18px;
+  background: #f8fafc;
+  border: 1px dashed var(--color-border);
+  border-radius: 16px;
+  height: 56px;
+  justify-content: center;
+}
+
+.readonly-box label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin: 0;
+  line-height: 1;
+}
+
+.readonly-box strong {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  line-height: 1.1;
+}
+
+.dark .readonly-box {
+  background: #111827;
+  border-color: #374151;
+}
+
+/* ==========================================
+   Wizard Layout & Progress Bar
+   ========================================== */
+.zakat-wizard-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.wizard-progress-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 2rem;
+  padding: 0 10px;
+}
+
+.wizard-progress-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #e2e8f0;
+  transform: translateY(-50%);
+  z-index: 1;
+  border-radius: 2px;
+  transition: background 0.3s ease;
+}
+
+.wizard-progress-line-active {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 4px;
+  background: var(--color-primary);
+  transform: translateY(-50%);
+  z-index: 2;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.wizard-step-node {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wizard-step-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid #cbd5e1;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.wizard-step-node.active .wizard-step-circle {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: scale(1.1);
+  box-shadow: 0 0 12px rgba(37, 99, 235, 0.25);
+}
+
+.wizard-step-node.completed .wizard-step-circle {
+  border-color: #10b981;
+  background: #10b981;
+  color: #ffffff;
+}
+
+.wizard-step-label {
+  position: absolute;
+  top: 44px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.wizard-step-node.active .wizard-step-label {
+  color: var(--color-text-primary);
+}
+
+.wizard-step-node.completed .wizard-step-label {
+  color: #10b981;
+}
+
+.dark .wizard-progress-line {
+  background: #374151;
+}
+
+.dark .wizard-step-circle {
+  background: #1f2937;
+  border-color: #4b5563;
+  color: #9ca3af;
+}
+
+/* ==========================================
+   Tooltips & Helper Elements
+   ========================================== */
+.zakat-field-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.zakat-field-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-flex;
+}
+
+.tooltip-trigger {
+  color: var(--color-text-secondary);
+  cursor: help;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.tooltip-trigger:hover {
+  color: var(--color-primary);
+}
+
+.tooltip-content {
+  visibility: hidden;
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  background: #1e293b;
+  color: #f8fafc;
+  text-align: center;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tooltip-content::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #1e293b transparent transparent transparent;
+}
+
+.tooltip-container:hover .tooltip-content {
+  visibility: visible;
+  opacity: 1;
+}
+
+.zakat-helper-text {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  line-height: 1.3;
+}
+
+/* ==========================================
+   Input Formats & Animations
+   ========================================== */
+.input-with-symbol {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-symbol-prefix {
+  position: absolute;
+  left: 14px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  pointer-events: none;
+}
+
+.input-with-symbol .form-input {
+  padding-left: 36px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-with-symbol .form-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* ==========================================
+   Sticky Sidebar & Cards
+   ========================================== */
+.zakat-result-sticky {
+  position: sticky;
+  top: 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ==========================================
+   Result Indicators
+   ========================================== */
+.zakat-alert-banner {
+  padding: 16px 20px;
+  border-radius: 14px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.zakat-alert-success {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+}
+
+.zakat-alert-warning {
+  background: #fffbeb;
+  border: 1px solid #fef3c7;
+  color: #92400e;
+}
+
+.dark .zakat-alert-success {
+  background: #064e3b;
+  border-color: #047857;
+  color: #a7f3d0;
+}
+
+.dark .zakat-alert-warning {
+  background: #78350f;
+  border-color: #b45309;
+  color: #fde68a;
+}
+
+/* ==========================================
+   Accordion / FAQs & Professional Content
+   ========================================== */
+.zakat-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.zakat-faq-item {
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.zakat-faq-header {
+  width: 100%;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-text-primary);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s ease;
+}
+
+.zakat-faq-header:hover {
+  background: var(--color-bg-hover);
+}
+
+.zakat-faq-body {
+  padding: 0 20px 16px;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  border-top: 1px solid transparent;
+}
+
+.dark .zakat-faq-item {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+/* ==========================================
+   Glossary Table
+   ========================================== */
+.zakat-glossary-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+
+.zakat-glossary-table th, 
+.zakat-glossary-table td {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 0.85rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.zakat-glossary-table th {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.zakat-glossary-table td {
+  color: var(--color-text-secondary);
+}
+
+/* ==========================================
+   Mobile Bottom Sticky Bar
+   ========================================== */
+@media (max-width: 991px) {
+  .zakat-mobile-sticky-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #ffffff;
+    border-top: 1px solid var(--color-border);
+    padding: 12px 20px;
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .dark .zakat-mobile-sticky-footer {
+    background: #1f2937;
+    border-color: #374151;
+  }
+}

@@ -11,10 +11,12 @@ import ThemeToggle from "./theme-toggle";
 import MobileMenu from "./mobile-menu";
 import MobileDrawer from "./mobile-drawer";
 import MobileOverlay from "./mobile-overlay";
+import GlobalSearch from "./global-search";
 
 export default function Header() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] =
-    useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   function toggleMobileMenu() {
     setIsMobileMenuOpen((previous) => !previous);
@@ -27,54 +29,61 @@ export default function Header() {
   /* ======================================================
      Lock Body Scroll
   ====================================================== */
-
   useEffect(() => {
     if (isMobileMenuOpen) {
-      document.body.classList.add(
-        "body-scroll-lock"
-      );
+      document.body.classList.add("body-scroll-lock");
     } else {
-      document.body.classList.remove(
-        "body-scroll-lock"
-      );
+      document.body.classList.remove("body-scroll-lock");
     }
 
     return () => {
-      document.body.classList.remove(
-        "body-scroll-lock"
-      );
+      document.body.classList.remove("body-scroll-lock");
     };
   }, [isMobileMenuOpen]);
 
   /* ======================================================
-     ESC Close
+     Scroll Detection
   ====================================================== */
-
   useEffect(() => {
-    function handleEscape(
-      event: KeyboardEvent
-    ) {
+    function handleScroll() {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    }
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  /* ======================================================
+     ESC & Key Shortcuts
+  ====================================================== */
+  useEffect(() => {
+    function handleKeyDown(event: KeyboardEvent) {
       if (event.key === "Escape") {
         closeMobileMenu();
       }
+      // Ctrl+K or Cmd+K
+      if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k") {
+        event.preventDefault();
+        setIsSearchOpen((prev) => !prev);
+      }
     }
 
-    window.addEventListener(
-      "keydown",
-      handleEscape
-    );
+    window.addEventListener("keydown", handleKeyDown);
 
     return () => {
-      window.removeEventListener(
-        "keydown",
-        handleEscape
-      );
+      window.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
 
   return (
     <>
-      <header className="site-header">
+      <header className={`site-header ${isScrolled ? "site-header-scrolled" : ""}`}>
         <Container>
           <div className="site-header-inner">
             <Logo />
@@ -82,7 +91,7 @@ export default function Header() {
             <Navigation />
 
             <div className="site-header-actions">
-              <SearchButton />
+              <SearchButton onClick={() => setIsSearchOpen(true)} />
 
               <ThemeToggle />
 
@@ -103,6 +112,12 @@ export default function Header() {
       <MobileDrawer
         isOpen={isMobileMenuOpen}
         onClose={closeMobileMenu}
+        onSearchClick={() => setIsSearchOpen(true)}
+      />
+
+      <GlobalSearch
+        isOpen={isSearchOpen}
+        onClose={() => setIsSearchOpen(false)}
       />
     </>
   );

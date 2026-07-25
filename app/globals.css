@@ -1,2 +1,19 @@
+/* ======================================================
+   Global Styles
+====================================================== */
+
+/* Main Design System */
 @import "../styles/index.css";
+
+/* Blog */
 @import "../styles/blog/blog.css";
+
+/* Calculator Styles */
+@import "../styles/calculators/common.css";
+@import "../styles/calculators/zakat.css";
+@import "../styles/sections/inheritance.css";
+@import "../styles/tool/hero.css";
+@import "../styles/responsive/inheritance-responsive.css";
+
+/* Content Pages */
+@import "../styles/sections/content-page.css";

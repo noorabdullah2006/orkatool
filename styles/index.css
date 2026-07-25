@@ -1,4 +1,6 @@
-/* Tokens */
+/* ===========================================
+   TOKENS
+=========================================== */
 
 @import "./tokens/colors.css";
 @import "./tokens/typography.css";
@@ -10,13 +12,17 @@
 @import "./tokens/z-index.css";
 @import "./tokens/themes.css";
 
-/* Base */
+/* ===========================================
+   BASE
+=========================================== */
 
 @import "./base/reset.css";
 @import "./base/base.css";
 @import "./base/typography.css";
 
-/* Layout */
+/* ===========================================
+   LAYOUTS
+=========================================== */
 
 @import "./layouts/container.css";
 @import "./layouts/header.css";
@@ -24,7 +30,9 @@
 @import "./layouts/main.css";
 @import "./layouts/section.css";
 
-/* Components */
+/* ===========================================
+   COMPONENTS
+=========================================== */
 
 @import "./components/buttons.css";
 @import "./components/spinner.css";
@@ -41,25 +49,64 @@
 @import "./components/text.css";
 @import "./components/divider.css";
 @import "./components/icon.css";
+@import "./components/shared.css";
+@import "./components/forms.css";
+@import "./components/directory.css";
 
-/* Animations */
+/* ===========================================
+   ANIMATIONS
+=========================================== */
 
 @import "./animations/keyframes.css";
 @import "./animations/transitions.css";
 
-/* Sections */
+/* ===========================================
+   SECTIONS
+=========================================== */
 
 @import "./sections/hero.css";
+@import "./tool/hero.css";
+@import "./sections/trusted-companies.css";
 @import "./sections/categories.css";
 @import "./sections/popular-tools.css";
 @import "./sections/why-choose.css";
+@import "./sections/how-it-works.css";
+@import "./sections/faq.css";
 @import "./sections/latest-articles.css";
+@import "./sections/final-cta.css";
 
-/* Theme */
+/* ===========================================
+   CALCULATORS
+=========================================== */
+
+@import "./calculators/common.css";
+@import "./calculators/zakat.css";
+@import "./sections/inheritance.css";
+@import "./responsive/inheritance-responsive.css";
+@import "./tool/related.css";
+
+/* ===========================================
+   THEMES
+=========================================== */
 
 @import "./themes/light.css";
 
-
-/* Responsive */
+/* ===========================================
+   RESPONSIVE
+=========================================== */
 
 @import "./responsive/index.css";
+
+/* ===========================================
+   CATEGORY PAGES
+=========================================== */
+
+@import "./category/card.css";
+@import "./category/category.css";
+@import "./category/content.css";
+@import "./category/faq.css";
+@import "./category/grid.css";
+@import "./category/hero.css";
+@import "./category/search.css";
+@import "./category/stats.css";
+@import "./category/responsive.css";

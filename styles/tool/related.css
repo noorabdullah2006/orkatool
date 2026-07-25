@@ -1,0 +1,90 @@
+/* =========================================================
+   Related Tools Section
+========================================================= */
+
+.related-tools {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.related-tools-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 2rem;
+}
+
+.related-tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.related-tool-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  background: var(--color-surface);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.related-tool-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+  background: #fff;
+}
+
+.related-tool-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(59, 130, 246, 0.08);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.related-tool-content {
+  flex: 1;
+}
+
+.related-tool-title-card {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.related-tool-card:hover .related-tool-title-card {
+  color: var(--color-primary);
+}
+
+.related-tool-description {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+.related-tool-arrow {
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.related-tool-card:hover .related-tool-arrow {
+  color: var(--color-primary);
+  transform: translateX(4px);
+}

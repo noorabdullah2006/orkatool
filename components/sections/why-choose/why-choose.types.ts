@@ -5,4 +5,5 @@ export interface WhyChooseItem {
   title: string;
   description: string;
   icon: LucideIcon;
+  metric?: string;
 }
