@@ -138,7 +138,7 @@ export default function ZakatForm() {
                       }} 
                     />
                     <strong style={{ fontSize: "0.85rem", color: rates.isCachedPastDay ? "#d97706" : "#059669" }}>
-                      {rates.isCachedPastDay ? "Using Cached Market Prices" : "Updated Today"}
+                      {rates.isCachedPastDay ? "Live prices are temporarily unavailable. Showing the last successfully synced market price." : "Updated Today"}
                     </strong>
                   </div>
                   <span style={{ fontSize: "0.8rem", color: "var(--color-text-secondary)" }}>

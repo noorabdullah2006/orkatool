@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Explore our full directory of free online tools, converters, and calculators. Search, filter, and sort our collection to find exactly what you need.",
   alternates: {
-    canonical: "/tools",
+    canonical: "/calculator-tools",
   },
 };
 

@@ -1,7 +1,8 @@
 import type { HeroContent } from "./hero.types";
+import { getAllTools } from "@/content/tools";
 
 export const heroContent: HeroContent = {
-  badge: "Trusted by Thousands",
+  badge: "Top Rated Utilities",
 
   title: "Fast, Free & Secure Online Tools",
 
@@ -23,7 +24,7 @@ export const heroContent: HeroContent = {
 
   stats: [
     {
-      value: "100+",
+      value: `${getAllTools().filter(t => t.published).length}`,
       label: "Free Tools",
     },
     {

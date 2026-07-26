@@ -23,7 +23,7 @@ const REPEATER_ICONS = [
 export function IslamicTrustBar() {
   return (
     <div className="hero-trust-bar">
-      <p className="trust-bar-heading">TRUSTED BY 100,000+ USERS</p>
+      <p className="trust-bar-heading">BUILT FOR ACCURACY</p>
       <div className="trust-chips">
         {ISLAMIC_TRUST_CHIPS.map((chip, i) => (
           <span key={chip.label} className="trust-chip">
@@ -33,7 +33,7 @@ export function IslamicTrustBar() {
         ))}
       </div>
       <p className="trust-bar-note">
-        Trusted by over 100,000+ users for accurate Islamic financial calculations.
+        Designed for reliable and accurate Islamic financial calculations.
       </p>
     </div>
   );
@@ -43,7 +43,7 @@ export function IslamicTrustBar() {
 export function TextRepeaterTrustBar() {
   return (
     <div className="hero-trust-bar">
-      <p className="trust-bar-heading">TRUSTED BY 100,000+ ACTIVE USERS</p>
+      <p className="trust-bar-heading">BUILT FOR RELIABILITY</p>
       <div className="trust-chips">
         {REPEATER_TRUST_CHIPS.map((chip, i) => (
           <span key={chip.label} className="trust-chip">
@@ -53,7 +53,7 @@ export function TextRepeaterTrustBar() {
         ))}
       </div>
       <p className="trust-bar-note">
-        Trusted by over 100,000+ active users for smart text repeat formatting.
+        Designed for smooth and reliable text repeat formatting.
       </p>
     </div>
   );

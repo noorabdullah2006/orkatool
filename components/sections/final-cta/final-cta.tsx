@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Container from "@/components/layout/container/container";
 import { ArrowRight } from "lucide-react";
+import { getAllTools } from "@/content/tools";
 
 export default function FinalCTA() {
   return (
@@ -15,7 +16,7 @@ export default function FinalCTA() {
 
           <div className="final-cta-content">
             <h2 className="final-cta-title">
-              Ready to Explore 100+ Free Online Tools?
+              Ready to Explore {getAllTools().filter(t => t.published).length} Free Online Tools?
             </h2>
             <p className="final-cta-subtitle">
               Start using OrkaTool today to speed up your workflow. Fast, secure, and always free to use.

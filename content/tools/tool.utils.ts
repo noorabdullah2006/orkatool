@@ -45,3 +45,16 @@ export function getToolBySlug(
   );
 
 }
+
+/* =========================================================
+   Get Tool URL
+========================================================= */
+
+export function getToolUrl(
+  tool: Pick<Tool, "slug" | "category">
+): string {
+
+  const categorySegment = tool.category === "calculators" ? "calculator-tools" : tool.category;
+  return `/${categorySegment}/${tool.slug}`;
+
+}

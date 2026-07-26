@@ -27,27 +27,11 @@ export const footerSections: FooterSection[] = [
   {
     title: "Popular Tools",
     links: [
-      { label: "Age Calculator", href: "/tools/age-calculator" },
-      { label: "BMI Calculator", href: "/tools/bmi-calculator" },
-      { label: "Percentage Calculator", href: "/tools/percentage-calculator" },
-      { label: "Password Generator", href: "/tools/password-generator" },
+      { label: "Zakat Calculator", href: "/calculator-tools/zakat-calculator" },
+      { label: "Inheritance Calculator", href: "/calculator-tools/inheritance-calculator" },
+      { label: "Text Repeater", href: "/text-tools/text-repeater" },
     ],
   },
 ];
 
-export const socialLinks: SocialLink[] = [
-  {
-    label: "Facebook",
-    href: "#",
-  },
-
-  {
-    label: "LinkedIn",
-    href: "#",
-  },
-
-  {
-    label: "GitHub",
-    href: "#",
-  },
-];
+export const socialLinks: SocialLink[] = [];

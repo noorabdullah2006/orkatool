@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { footerSections } from "./footer-data";
 import { tools } from "@/content/tools/tool.data";
+import { getToolUrl } from "@/content/tools";
 
 export default function FooterLinks() {
   // Query popular and published tools dynamically from tool.data.ts
@@ -8,7 +9,7 @@ export default function FooterLinks() {
     .filter((t) => t.published && t.popular)
     .map((t) => ({
       label: t.title,
-      href: `/tools/${t.slug}`,
+      href: getToolUrl(t),
     }));
 
   const dynamicSections = footerSections.map((section) => {

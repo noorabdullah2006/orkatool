@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import type { MetadataRoute } from "next";
-import { getAllTools } from "@/content/tools";
+import { getAllTools, getToolUrl } from "@/content/tools";
 import { getAllCategories } from "@/content/categories";
 
 export default async function getToolsSitemap(): Promise<MetadataRoute.Sitemap> {
@@ -11,7 +11,7 @@ export default async function getToolsSitemap(): Promise<MetadataRoute.Sitemap> 
   // 1. Core static routes
   const coreRoutes = [
     "",
-    "/tools",
+    "/calculator-tools",
     "/about",
     "/contact",
     "/privacy-policy",
@@ -36,8 +36,7 @@ export default async function getToolsSitemap(): Promise<MetadataRoute.Sitemap> 
   // 3. Dynamic Tools
   const tools = getAllTools().filter((tool) => tool.published);
   const toolRoutes = tools.map((tool) => {
-    const routePrefix = tool.category === "calculators" ? "calculator-tools" : tool.category;
-    const routePath = `/${routePrefix}/${tool.slug}`;
+    const routePath = getToolUrl(tool);
 
     return {
       url: `${baseUrl}${routePath}`,

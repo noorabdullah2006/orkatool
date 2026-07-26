@@ -4,7 +4,7 @@ import Section from "@/components/layout/section";
 import PopularToolsHeader from "./popular-tools-header";
 import PopularToolCard from "./popular-tool-card";
 
-import { getAllTools } from "@/content/tools";
+import { getAllTools, getToolUrl } from "@/content/tools";
 
 export default function PopularTools() {
   const tools = getAllTools().filter(
@@ -17,7 +17,7 @@ export default function PopularTools() {
 
         <PopularToolsHeader
           title="Most Used Online Tools"
-          description="Quick access to our most popular free online tools. Fast, accurate, and trusted by thousands of users."
+          description="Quick access to our most popular free online tools. Fast, accurate, and designed for reliable calculations."
         />
 
         <div className="popular-tools-grid">
@@ -30,7 +30,7 @@ export default function PopularTools() {
                 description: tool.description,
                 icon: tool.icon,
                 category: tool.category,
-                href: `/tools/${tool.slug}`,
+                href: getToolUrl(tool),
                 badge: tool.featured ? "Editor's Pick" : "Popular",
               }}
             />

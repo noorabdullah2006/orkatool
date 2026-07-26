@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import Hero from "@/components/sections/hero";
-import TrustedCompanies from "@/components/sections/trusted-companies/trusted-companies";
+
 import Categories from "@/components/sections/categories";
 import PopularTools from "@/components/sections/popular-tools";
 import WhyChoose from "@/components/sections/why-choose/why-choose";
@@ -72,7 +72,7 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homePageSchema) }}
       />
       <Hero />
-      <TrustedCompanies />
+
 
       <Categories />
 

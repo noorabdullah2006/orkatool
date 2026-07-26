@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import { tools } from "@/content/tools/tool.data";
 import { Search, X, CornerDownLeft } from "lucide-react";
+import { getToolUrl } from "@/content/tools";
 
 interface GlobalSearchProps {
   isOpen: boolean;
@@ -76,7 +77,7 @@ export default function GlobalSearch({ isOpen, onClose }: GlobalSearchProps) {
       } else if (e.key === "Enter") {
         e.preventDefault();
         if (filteredTools[selectedIndex]) {
-          const path = `/tools/${filteredTools[selectedIndex].slug}`;
+          const path = getToolUrl(filteredTools[selectedIndex]);
           router.push(path);
           onClose();
         }
@@ -178,7 +179,7 @@ export default function GlobalSearch({ isOpen, onClose }: GlobalSearchProps) {
                       className="search-result-item"
                       data-selected={idx === selectedIndex}
                       onClick={() => {
-                        router.push(`/tools/${tool.slug}`);
+                        router.push(getToolUrl(tool));
                         onClose();
                       }}
                       onMouseEnter={() => setSelectedIndex(idx)}

@@ -2,13 +2,14 @@
 
 import Container from "@/components/layout/container/container";
 import { MousePointerClick, UploadCloud, CheckCircle } from "lucide-react";
+import { getAllTools } from "@/content/tools";
 
 export default function HowItWorks() {
   const steps = [
     {
       step: "01",
       title: "Choose Tool",
-      description: "Search or browse our category lists to select from 100+ utilities.",
+      description: `Search or browse our category lists to select from ${getAllTools().filter(t => t.published).length} free utilities.`,
       icon: MousePointerClick,
       color: "blue"
     },

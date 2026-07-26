@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
+import { getAllTools } from "@/content/tools";
 
 const SECTIONS = [
   { id: "what-is-zakat", label: "What Is Zakat" },
@@ -644,43 +645,25 @@ export default function ZakatCalculatorContent() {
           <div className="related-islamic-tools">
             <h2 className="related-islamic-tools-title">Related Islamic Tools</h2>
             <div className="related-tools-grid">
-              
-              <Link href="/calculator-tools/inheritance-calculator" className="related-tool-card">
-                <div className="related-tool-icon">⚖️</div>
-                <div className="related-tool-content">
-                  <h4 className="related-tool-title-card">Islamic Inheritance Calculator</h4>
-                  <p className="related-tool-description">Calculate Islamic Estate &amp; Inheritance shares distribution according to Faraid Fiqh.</p>
-                </div>
-                <span className="related-tool-arrow">→</span>
-              </Link>
-
-              <Link href="/tools/age-calculator" className="related-tool-card">
-                <div className="related-tool-icon">⏱</div>
-                <div className="related-tool-content">
-                  <h4 className="related-tool-title-card">Age Calculator</h4>
-                  <p className="related-tool-description">Calculate your exact age in years, months, weeks, days, hours, and minutes instantly.</p>
-                </div>
-                <span className="related-tool-arrow">→</span>
-              </Link>
-
-              <Link href="/tools/percentage-calculator" className="related-tool-card">
-                <div className="related-tool-icon">📊</div>
-                <div className="related-tool-content">
-                  <h4 className="related-tool-title-card">Percentage Calculator</h4>
-                  <p className="related-tool-description">Calculate percentage increases, decreases, differences, or proportions quickly.</p>
-                </div>
-                <span className="related-tool-arrow">→</span>
-              </Link>
-
-              <Link href="/tools/discount-calculator" className="related-tool-card">
-                <div className="related-tool-icon">🏷</div>
-                <div className="related-tool-content">
-                  <h4 className="related-tool-title-card">Discount Calculator</h4>
-                  <p className="related-tool-description">Calculate discounted prices, tax amounts, currency conversions, and savings immediately.</p>
-                </div>
-                <span className="related-tool-arrow">→</span>
-              </Link>
-
+              {getAllTools()
+                .filter((t) => t.id !== "zakat-calculator" && t.published)
+                .slice(0, 4)
+                .map((t) => (
+                  <Link
+                    key={t.id}
+                    href={`/${
+                      t.category === "calculators" ? "calculator-tools" : t.category
+                    }/${t.slug}`}
+                    className="related-tool-card"
+                  >
+                    <div className="related-tool-icon">{t.icon}</div>
+                    <div className="related-tool-content">
+                      <h4 className="related-tool-title-card">{t.title}</h4>
+                      <p className="related-tool-description">{t.description}</p>
+                    </div>
+                    <span className="related-tool-arrow">→</span>
+                  </Link>
+                ))}
             </div>
           </div>
 

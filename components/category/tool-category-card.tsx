@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import type { Tool } from "@/content/tools";
+import { getToolUrl } from "@/content/tools";
 
 type Props = {
   tool: Tool;
@@ -11,7 +12,7 @@ export default function ToolCategoryCard({
 }: Props) {
   return (
     <Link
-      href={`/tools/${tool.slug}`}
+      href={getToolUrl(tool)}
       className="category-card category-card-link"
     >
 

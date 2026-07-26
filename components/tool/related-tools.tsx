@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getToolsByCategory } from "@/content/tools/tool.utils";
+import { getToolsByCategory, getToolUrl } from "@/content/tools/tool.utils";
 
 interface RelatedToolsProps {
   category: string;
@@ -33,7 +33,7 @@ export default function RelatedTools({
         {related.map((tool) => (
           <Link
             key={tool.id}
-            href={`/tools/${tool.slug}`}
+            href={getToolUrl(tool)}
             className="related-tool-card"
           >
             <div className="related-tool-icon">{tool.icon}</div>
